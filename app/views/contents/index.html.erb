@@ -1,12 +1,31 @@
-<div class="wrap">
+<%= render "shared/header" %>
+ <% if user_signed_in? %>
 
-
-<header class='top-page-header'>
-  <div class='title-contents'>
-    <%= link_to 'Sabusuku no Kanri', "#", class: "title-link" %>
+<p class= "body-link">あした編集する</p>
+ <div class='main-body'>
+  
+  <div class='left-body'>
+    <div class='left-body-box'>
+      <p class= 'body-title'>サブスクの管理、</p>
+      <p class= 'body-title'>はじめよう。</p>
+     <div class='main-image'>
+      <%= image_tag "sumahofree.jpeg", class:"body-image" %>
+     </div>
+    </div>
   </div>
-</header>
 
+  <div class='light-body'>
+
+    <ul class='body-lists'>
+      <li><p>Let's get started</p></li>
+      <li class='list'><%= link_to '新規登録', new_user_registration_path, class: "body-link" %></li>
+      <li class='list'><%= link_to 'ログイン', new_user_session_path, class: "body-link" %></li>
+      <li class='list'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "body-link" %></li>
+    </ul>
+   
+  </div>
+
+    <% else %>
 <div class='main-body'>
   
   <div class='left-body'>
@@ -20,13 +39,20 @@
   </div>
 
   <div class='light-body'>
-    
+  
     <ul class='body-lists'>
-      <li class='list'><%= link_to '新規登録', "#", class: "body-link" %></li>
-      <li class='list'><%= link_to 'ログイン', "#", class: "body-link" %></li>
+      <li><p>Let's get started</p></li>
+      <li class='list'><%= link_to '新規登録', new_user_registration_path, class: "body-link" %></li>
+      <li class='list'><%= link_to 'ログイン', new_user_session_path, class: "body-link" %></li>
+      <li class='list'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "body-link" %></li>
     </ul>
-
+   
   </div>
 
+     <% end %>
+
+
+
+  
 <!-- /.wrap --></div>
 </div>

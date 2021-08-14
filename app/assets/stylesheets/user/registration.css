@@ -1,0 +1,134 @@
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.form-wrap{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+.form-box{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+ }
+.newicon-image{
+  height: 5vh;
+
+}
+.form-group{
+  color: #000;
+  margin: 2vh;
+}
+.input-default{
+  width: 80vh;
+  height: 3vw;
+  border-width:thick; 
+  border-radius: 10px;
+  border-color: #000;
+}
+.actions{
+  
+}
+.submit-botan{
+  background-color: #fff;
+  width: 12vh;
+  height: 3vw;
+  border-width:thick; 
+  border-radius: 10px;
+  border-color: #000;
+  font-weight: bolder; 
+}
+
+/*入力確認*/
+.confirm{
+ 
+}
+.user-check{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder; 
+}
+.confirmform-wrap{
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.chack-box{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.confirm.form-box{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  border:1px solid;
+ }
+ .submit-box{
+   padding-top: 5vh;
+ }
+
+ .check-letter{
+  font-weight: 900;
+  text-align: center
+ }
+ /*入力確認の枠*/
+ .box17{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.box17:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box17:before {left: 10px;}
+.box17:after {right: 10px;}
+.box17 p {
+    margin: 0; 
+    padding: 0;
+}
+/*入力確認の枠*/
+
+/*完了画面*/
+.complete-box{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+
+}
+
+.complete-lists{
+  text-align: center;
+  border-width:thick; 
+  border-radius: 10px;
+  
+}
+
+.body-link {
+  color: #FFF;
+  background-color: #000;
+ font-size: 5vh;
+ text-decoration:none; 
+ border-radius: 10px;
+ 
+}
