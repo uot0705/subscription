@@ -62,3 +62,71 @@ body{
  border-radius: 10px;
  
 }
+
+/*ログイン後*/
+.login-main-body{
+  width: 100vw;
+}
+.login-contents{
+  
+}
+.sabusuku-title-name{
+  margin-left: 10vw;
+  font-size: 60px;
+}
+.sabusuku-title{
+  width: 100vw;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;  
+  margin-bottom: 2vh;
+}
+.login-button{
+  padding: 0 5vw;
+  margin: 0 0 3vh 0;
+  text-align: center;
+}
+/*コンテンツ一覧表示*/
+.sabusuku-titlename{
+
+}
+.content-new{
+  color: #FFF;
+  background-color: #000;
+ font-size: 3vh;
+ text-decoration:none; 
+ padding: 2vh ;
+ margin-right: 15vw;
+ border-radius: 10px;
+}
+
+.content-lists{
+  margin:0 auto;
+}
+.all-list{
+  width: 50vw;
+  margin:0 auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 3px 0 ;
+
+  border:1px solid;
+  border-width:thick; 
+  border-radius: 10px;
+  border-color: #000;
+}
+.content-img{
+  width:50px;
+	height:50px;
+	object-fit:cover;
+	border-radius:50%;
+  margin-right: 5vw;
+}
+.content-name{
+  width: 20vw;
+  font-weight: 900; 
+  font-size: 40px;
+  margin-right: 5vw;
+  text-align: center;
+}

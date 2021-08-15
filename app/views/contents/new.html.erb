@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+
+<div class="content-form">
+
+
+  <h2 class="items-sell-title">商品の情報を入力</h2>
+  <%= form_with model: @content,  local: true do |f| %>
+ 
+    <div class="card">
+
+     <%# 金額 %>
+     <div class="card__imgframe">
+       <div class="price-content">
+         <div class="price-text">
+            <span>Price</span>
+          </div>
+          <div>
+            <span class="sell-yen">¥</span>
+            <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          </div>
+        </div>
+      </div>
+      <%# 金額 %>
+    
+    <%# TITLE %>
+    <div class="card__textbox">
+      <div class="card__overviewtext">
+       <h2>Title</h2>
+      </div>
+      <%= f.text_area :name, class:"card__titletext", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+
+   <%#div class="card__textbox">
+      <div class="card__overviewtext">
+       Cycle
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :cycle, class:"card__titletext", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    <%#/div%>
+
+    <%# TITLE %>
+    <div class="card__textbox">
+      <div class="card__overviewtext">
+       <h2>Icon Image</h2>
+      </div>
+     <%= f.file_field :image, class:"card__titletext" ,id:"item-image" %>
+    </div>
+
+    <%# 下部ボタン %>
+     <div class="card__textbox">
+      <%= f.submit "add" ,class:"sell-btn" %>
+      <%=link_to '戻る', root_path, class:"back-btn" %>
+     </div>
+    <%# /下部ボタン %>
+
+  <% end %>
+
+ </div>
+</div>

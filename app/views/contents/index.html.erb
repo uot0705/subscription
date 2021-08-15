@@ -1,33 +1,42 @@
 <%= render "shared/header" %>
- <% if user_signed_in? %>
 
-<p class= "body-link">あした編集する</p>
- <div class='main-body'>
-  
-  <div class='left-body'>
-    <div class='left-body-box'>
-      <p class= 'body-title'>サブスクの管理、</p>
-      <p class= 'body-title'>はじめよう。</p>
-     <div class='main-image'>
-      <%= image_tag "sumahofree.jpeg", class:"body-image" %>
-     </div>
+<div class="wrap">
+
+<%# ユーザーログイン有無で条件分岐 %>
+<% if user_signed_in? %>
+<div class='login-main-body'>
+  <%# サブスクTITLE %>
+   <div class="sabusuku-title" >
+     <h2 class='sabusuku-title-name'>Subscription</h2>
+     <%= link_to 'サブスク登録', new_content_path, class: "content-new" %></li>
     </div>
-  </div>
+  <%# サブスクTITLE %>
+  <div class='login-contents'>
+      <ul class='content-lists'>
+    <%# マイサブスク一覧表示 %>
+      <% @content.each do |content| %>
+          <%# 画像 %>
+            <li class='all-list'>
+              <%= image_tag content.image, class: "content-img" %>
+            <%# タイトル %>
+              <div class='content-name'>
+                 <%= content.name%>
+              </div>
+            <%# 金額 %>
+              <div class='content-price'>
+                <span><%= content.price %></span>
+              </div>
+            </li>
+        <% end %>
+      <%# マイサブスク一覧表示 %>
+     </ul>
+   </div>
+  <%# サブスクbody %>
+</div>
 
-  <div class='light-body'>
-
-    <ul class='body-lists'>
-      <li><p>Let's get started</p></li>
-      <li class='list'><%= link_to '新規登録', new_user_registration_path, class: "body-link" %></li>
-      <li class='list'><%= link_to 'ログイン', new_user_session_path, class: "body-link" %></li>
-      <li class='list'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "body-link" %></li>
-    </ul>
-   
-  </div>
 
     <% else %>
 <div class='main-body'>
-  
   <div class='left-body'>
     <div class='left-body-box'>
       <p class= 'body-title'>サブスクの管理、</p>
@@ -42,17 +51,14 @@
   
     <ul class='body-lists'>
       <li><p>Let's get started</p></li>
-      <li class='list'><%= link_to '新規登録', new_user_registration_path, class: "body-link" %></li>
+     <li class='list'><%= link_to '新規登録', new_user_registration_path, class: "body-link" %></li>
       <li class='list'><%= link_to 'ログイン', new_user_session_path, class: "body-link" %></li>
       <li class='list'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "body-link" %></li>
     </ul>
    
   </div>
 
-     <% end %>
+ <% end %> 
+ <%# ユーザーログイン有無で条件分岐 %>
 
-
-
-  
 <!-- /.wrap --></div>
-</div>
