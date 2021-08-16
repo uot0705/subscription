@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
   root to: "contents#index"
-  resources :contents ,only: [:new ,:create]
+  resources :contents ,only: [:new ,:create ,:edit ,:update ,:destroy]
 end

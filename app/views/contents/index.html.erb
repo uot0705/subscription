@@ -26,6 +26,7 @@
               <div class='content-price'>
                 <span><%= content.price %></span>
               </div>
+              <p><%= link_to "∨", edit_content_path(content.id) %></p>
             </li>
         <% end %>
       <%# マイサブスク一覧表示 %>
@@ -53,7 +54,6 @@
       <li><p>Let's get started</p></li>
      <li class='list'><%= link_to '新規登録', new_user_registration_path, class: "body-link" %></li>
       <li class='list'><%= link_to 'ログイン', new_user_session_path, class: "body-link" %></li>
-      <li class='list'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "body-link" %></li>
     </ul>
    
   </div>

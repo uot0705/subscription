@@ -3,7 +3,7 @@
 <div class="content-form">
 
 
-  <h2 class="items-sell-title">商品情報を入力</h2>
+  <h2 class="items-sell-title">商品情報を編集</h2>
   <%= form_with model: @content,  local: true do |f| %>
  
     <div class="card">
@@ -48,7 +48,8 @@
 
     <%# 下部ボタン %>
      <div class="card__textbox">
-      <%= f.submit "add" ,class:"sell-btn" %>
+      <%= f.submit "編集" ,class:"sell-btn" %>
+      <p><%= link_to "削除", content_path,method: :delete %></p>
       <%=link_to '戻る', root_path, class:"back-btn" %>
      </div>
     <%# /下部ボタン %>
