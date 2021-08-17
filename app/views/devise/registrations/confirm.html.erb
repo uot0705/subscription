@@ -18,7 +18,7 @@
 <div class = "chack-box">
  <p>email</p>
  <div class="box17">
-  <%= f.text_field :email, value: @user.email,class:"check-letter" ,style: "border: none",readonly: true %>
+  <%= f.text_field :email, value: @user.email,class:"check-letter",style: "border: none",readonly: true %>
  </div>
 </div>
 
@@ -26,14 +26,15 @@
  <div class = "chack-box">
   <p>password</p>
   <div class="box17">
-   <%= f.text_field :password, value: @user.password,class:"input-default" ,class:"check-letter" ,style: "border: none",readonly: true %>
+   <%= f.text_field :password, value: @user.password ,class:"check-letter" ,style: "border: none",readonly: true %>
   </div>
  </div>
    
  <div class = "chack-box">
    <p>お知らせ</p>
   <div class="box17">
-   <%= f.text_field :check_id, value: @user.check_id,class:"input-default" ,class:"check-letter" ,style: "border: none",readonly: true %>
+   <%= f.text_field :check, value: @user.check,class:"input-default" ,class:"check-letter" ,style: "border: none",readonly: true %>
+
   </div>
  </div>
 

@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 
-<%#h2>もう少しで、サブスクを管理できます。</h2#%>
+<h2 class="views-title">ユーザー新規登録</h2>
 
 <%= form_with model: @user, url: users_sign_up_confirm_path(@user),  local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -40,20 +40,21 @@
   </div>
 
  
-<div class = "form-box">
+  <div class = "form-box">
     <%= image_tag "check.png", class:"newicon-image" %>
     <div class="form-group">
       <div class='form-text-wrap'>
        <label class="form-text">お知らせ</label>
       </div>
-       <label><%= f.radio_button :check_id, "1" %> あり </label>
-       <label><%= f.radio_button :check_id, "2" %> なし</label>
+       <label><%= f.radio_button :check, "あり" %> あり </label>
+       <label><%= f.radio_button :check, "なし" %> なし </label>
     </div>
-</div>
-
-<div class="actions">
-    <%= f.submit "Sign up" , :class=> "submit-botan" %>
   </div>
+
+  <div class="actions">
+    <%= f.submit "確認画面" , :class=> "submit-botan" %>
+  </div>
+
 </div>
 <% end %>
 

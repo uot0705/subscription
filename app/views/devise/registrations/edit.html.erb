@@ -1,43 +1,80 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= render "shared/header" %>
+<h2 class="views-title">ユーザー編集</h2>
+<%= form_with model: current_user, url: user_registration_path, method: :put, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+ <div class='form-wrap'>
+  
+  <div class = "form-box">
+    <%= image_tag "user.png", class:"newicon-image" %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">ニックネーム</label>
+      </div>
+        <%= f.text_area :nickname, id:"nickname", placeholder:" 例) Tarou",  class:"input-default",maxlength:"40" %>
+    </div>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+  <div class = "form-box">
+    <%= image_tag "email.png", class:"newicon-image" %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+       <label class="form-text">email</label>
+      </div>
+        <%= f.email_field :email, class:"input-default", id:"email", placeholder:" PC・携帯どちらでも可", autofocus: true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+<div class = "form-box">
+    <%= image_tag "password.jpeg", class:"newicon-image" %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+       <label class="form-text">Password</label>
+      </div>
+        <%= f.password_field :password, class:"input-default", id:"password", placeholder:" 6文字以上の半角英数字" ,autocomplete: "new-password"%>
+    <p class='info-text'>※英数混合の6文字以上</p>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+<div class = "form-box">
+    <%= image_tag "password.jpeg", class:"newicon-image" %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+       <label class="form-text">Password</label>
+      </div>
+        <%= f.password_field :password_confirmation, class:"input-default", id:"password", placeholder:" 6文字以上の半角英数字" ,autocomplete: "new-password"%>
+    <p class='info-text'>※英数混合の6文字以上</p>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class = "form-box">
+    <%= image_tag "password.jpeg", class:"newicon-image" %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+       <label class="form-text">Password</label>
+      </div>
+      <%= f.label :current_password %>
+        <%= f.password_field :current_password, class:"input-default", id:"password", placeholder:" 6文字以上の半角英数字",autocomplete: "current-password" %>
+    <p class='info-text'>※英数混合の6文字以上</p>
+    </div>
   </div>
+ 
+<div class = "form-box">
+    <%= image_tag "check.png", class:"newicon-image" %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+       <label class="form-text">お知らせ</label>
+      </div>
+       <label><%= f.radio_button :check, "あり" %> あり </label>
+       <label><%= f.radio_button :check, "なし" %> なし </label>
+    </div>
+</div>
+
+<div class="actions">
+    <%= f.submit "確認画面" , :class=> "submit-botan" %>
+    <%= link_to "退会", user_registration_path(current_user.id) ,method: :delete, class: "user-delete-botan", "data-confirm" => "本当に退会しますか？"%>
+  </div>
+</div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

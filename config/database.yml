@@ -52,3 +52,4 @@ production:
   database: subscription_production
   username: subscription
   password: <%= ENV['SUBSCRIPTION_DATABASE_PASSWORD'] %>
+
