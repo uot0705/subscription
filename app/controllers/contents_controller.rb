@@ -36,7 +36,11 @@ def destroy
   redirect_to root_path
 end
 
-
+private
+  def content_params
+    params.require(:content).permit(:name, :price, :image).merge(user_id: current_user.id)
+  end
+  
   def find_action
     @content = Content.find(params[:id])
   end

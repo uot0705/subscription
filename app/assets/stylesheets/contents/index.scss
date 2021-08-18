@@ -20,15 +20,75 @@ body{
 }
 .left-body-box{
   font-weight: bolder; 
-  padding: 0 0 15vh 10vw;
+  padding: 0 0 10vw 0;
 }
 
 .body-title {
   color: #000;
- font-size: 7vh;
+ font-size: 60px;
  text-decoration:none; 
  padding: 0 0 0 5vw;
+
+ opacity:0;
+  animation-name:anime1;
+  animation-duration:0.5s; 
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+@keyframes anime1 {
+  0% {
+   opacity: 0;
+   transform: translateY(30px);
+  }
+    100%{
+      opacity: 1;
+       transform: translateY(0);
+   } 
+  }
+
+.body-title2 {
+  color: #000;
+  font-size: 60px;
+  text-decoration:none; 
+  padding: 0 0 0 5vw;
+  opacity:0;
+  animation-name:anime2;
+   animation-duration:0.5s; 
+   animation-delay: 1.2s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+ }
+ @keyframes anime2 {
+   0% {
+    opacity: 0;
+    transform: translateY(30px);
+   }
+     100%{
+       opacity: 1;
+        transform: translateY(0);
+    } 
+   }
+
+.left-body-image{
+ height: 50vh;
+ opacity:0;
+ animation-name:anime3;
+ animation-duration:0.5s; 
+ animation-delay: 1.4s;
+ animation-iteration-count: 1;
+ animation-fill-mode: forwards;
+}
+ @keyframes anime3 {
+  0% {
+  opacity: 0;
+  transform: translateY(30px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
 
 .light-body{
   width: 50vw;
@@ -36,9 +96,249 @@ body{
   display: flex;
   flex-direction: column; 
   justify-content: center; 
-  align-items: center;
-  margin-top: 12vh;
 }
+
+.light-image-top{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  position: relative;
+  padding-right: 10vw;
+  margin-bottom: 5vh;
+}
+.hukidasi-image{
+  height: 40vh;
+  width: 30vw;
+  opacity:0;
+  animation-name:anime5;
+  animation-duration:0.5s; 
+  animation-delay: 2.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime5 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+/*吹き出しの中*/
+.light-image-bottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.anime-image{
+  height: 8vh;
+  width: 3vw;
+  padding: 5vh 0 0 14vw;
+  opacity:0;
+  animation-name:anime7;
+  animation-duration:0.5s; 
+  animation-delay: 2.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime7 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+  .light-image-bottom2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+  .anime-image2{
+    height: 8vh;
+    width: 3vw;
+    padding: 13vh 0 0 18vw;
+    opacity:0;
+    animation-name:anime6;
+    animation-duration:0.5s; 
+    animation-delay: 2.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime6 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+
+  .light-image-bottom3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+  .anime-image3{
+    height: 8vh;
+    width: 3vw;
+    padding: 5vh 0 0 22vw;
+  opacity:0;
+  animation-name:anime8;
+  animation-duration:0.5s; 
+  animation-delay: 2.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime6 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+  .light-image-bottom4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+  .anime-image4{
+    height: 8vh;
+    width: 3vw;
+    padding: 15vh 0 0 25vw;
+    opacity:0;
+    animation-name:anime8;
+    animation-duration:0.5s; 
+    animation-delay: 2.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime8 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+
+  .light-image-bottom5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+  .anime-image5{
+    height: 8vh;
+    width: 3vw;
+    padding: 23vh 0 0 20vw;
+    opacity:0;
+    animation-name:anime9;
+    animation-duration:0.5s; 
+    animation-delay: 2.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime9 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+
+  .light-image-bottom6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+  .anime-image6{
+    height: 8vh;
+    width: 3vw;
+    padding: 18vh 0 0 13vw;
+    opacity:0;
+    animation-name:anime10;
+    animation-duration:0.5s; 
+    animation-delay: 2.9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime10 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+
+  .light-image-bottom7{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+  .anime-image7{
+    height: 8vh;
+    width: 3vw;
+    padding: 10vh 0 0 10vw;
+    opacity:0;
+    animation-name:anime11;
+    animation-duration:0.5s; 
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime11 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+.netosa-image{
+  height: 8vh;
+  width: 3vw;
+  opacity:0;
+  animation-name:anime4;
+  animation-duration:0.5s; 
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime4 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+
 .body-lists{
   padding: 5vh 5vw;
   margin: 0 10vw 20vh 0;
@@ -47,22 +347,42 @@ body{
   border-radius: 10px;
   border-color: #000;
   text-align: center;
+  opacity:0;
+  animation-name:anime12;
+  animation-duration:0.5s; 
+  animation-delay: 3.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime12 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+.new-buttons{
+  display: flex;
+  justify-content:space-between;
+  align-items: center; 
+   
 }
 
 
-.body-image{
-  height: 50vh;
-}
-.list{
+.usernew-list{
   margin-top: 5vh;
   
 }
-.body-link {
+.new-link {
   color: #FFF;
   background-color: #000;
- font-size: 5vh;
+ font-size: 20px;
  text-decoration:none; 
- padding: 2vh 5vw 2vh 5vw;
+ padding: 2vh 3vw 2vh 3vw;
  border-radius: 10px;
  
 }

@@ -133,6 +133,9 @@ body {
   border-radius: 10px;
   
 }
+.list{
+  margin-top: 5vh;
+}
 
 .body-link {
   color: #FFF;
