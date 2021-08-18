@@ -22,6 +22,14 @@ end
     super
   end
 
+  def update_without_current_password(params)
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+    update(params)
+  end
+
   def update
     if current_user.update(user_params)
       redirect_to root_path
@@ -29,6 +37,11 @@ end
       render :edit
     end
   end
+
+  protected
+    def update_resource(resource, params)
+      resource.update_without_password(params)
+    end
 
   # 新規追加
   def confirm
