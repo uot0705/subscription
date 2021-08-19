@@ -4,6 +4,12 @@ body{
 
 .wrap {
 	overflow: hidden;
+  position: relative;
+/*ヘッダーの位置調整*/
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
+  box-sizing: border-box;
 }
 
 .main-body{
@@ -390,6 +396,7 @@ body{
 /*ログイン後*/
 .login-main-body{
   width: 100vw;
+  height: 70%;
 }
 .login-contents{
   

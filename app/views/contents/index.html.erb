@@ -24,7 +24,7 @@
               </div>
             <%# 金額 %>
               <div class='content-price'>
-                <span><%= content.price %></span>
+                <span><%= "¥#{content.price}" %></span>
               </div>
               <%= link_to image_tag('menu2.png' ,class: "content-edit") ,edit_content_path(content.id) %> 
             </li>
@@ -100,3 +100,5 @@
  <%# ユーザーログイン有無で条件分岐 %>
 
 <!-- /.wrap --></div>
+<%= render "shared/footer" %>
+

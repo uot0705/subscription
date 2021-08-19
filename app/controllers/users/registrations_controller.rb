@@ -1,14 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
 
-  # newアクションは変更しません。
-  # GET /resource/sign_up
-  # def new
-  #   super
-  # end
-
-  # createアクションはコメントアウトを外し、superの上に下記を追加
-  # POST /resource
 def destroy
   @user = User.find(params[:format]) 
       @user.destroy
@@ -17,7 +9,7 @@ def destroy
 end
 
   def create
-    @user = User.new(sign_up_params)
+    @user = User.new(user_params)
     render :new and return if params[:back]
     super
   end
@@ -38,15 +30,12 @@ end
     end
   end
 
-  protected
-    def update_resource(resource, params)
-      resource.update_without_password(params)
-    end
+ 
 
   # 新規追加
   def confirm
-    @user = User.new(sign_up_params)  
-
+    @user = User.new(user_params)
+    render :new if @user.invalid?
   end
 
   # 新規追加
@@ -61,6 +50,11 @@ end
   private
   def user_params
     params.require(:user).permit(:nickname, :email, :password, :check)
+  end
+
+  protected
+  def update_resource(resource, params)
+    resource.update_without_password(params)
   end
 
 end

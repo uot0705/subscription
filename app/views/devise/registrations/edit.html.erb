@@ -37,9 +37,10 @@
 </div>
 
 <div class="actions">
-    <%= f.submit "確認画面" , :class=> "submit-botan" %>
-    <%= link_to "退会", user_registration_path(current_user.id) ,method: :delete, class: "user-delete-botan", "data-confirm" => "本当に退会しますか？"%>
+    <%= f.submit "更新" , :class=> "submit-botan" %>
+   
   </div>
+   <%= link_to "退会", user_registration_path(current_user.id) ,method: :delete, class: "user-delete-botan", "data-confirm" => "本当に退会しますか？"%>
 </div>
 <% end %>
 

@@ -2,6 +2,9 @@
 
 <h2 class="views-title">ログイン</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%#エラー表示されない。。。。%>
+<%= render "devise/shared/error_messages", resource: resource %>
+<%#エラー表示されない。。。。%>
   <div class = "form-box">
     <%= image_tag "email.png", class:"newicon-image" %>
     <div class="form-group">

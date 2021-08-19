@@ -48,8 +48,8 @@ body {
 }
 .submit-botan{
   background-color: #fff;
-  width: 12vh;
-  height: 3vw;
+   width: 6vw;
+  height: 6vh;
   border-width:thick; 
   border-radius: 10px;
   border-color: #000;
@@ -133,17 +133,17 @@ body {
   border-radius: 10px;
   
 }
-.list{
+.conp-list{
   margin-top: 5vh;
 }
 
-.body-link {
+.comp-link {
   color: #FFF;
   background-color: #000;
  font-size: 5vh;
  text-decoration:none; 
  border-radius: 10px;
- 
+ padding: 10px;
 }
 /*ログイン*/
 .loguin-actions{
@@ -192,9 +192,9 @@ body {
 .user-delete-botan{
   background-color: #fff;
   color: #000;
-  width: 22vh;
-  height: 3vw;
-  padding: 5px;
+  width: 6vw;
+  height: 6vh;
+  padding: 20px 5px 0 5px;
   margin: 5vh 1vw 0 0;
   font-weight: bolder; 
   border:1px solid #000;

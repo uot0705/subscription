@@ -3,18 +3,18 @@
 
 <h2 class="views-title">ユーザー新規登録</h2>
 
-<%= form_with model: @user, url: users_sign_up_confirm_path(@user),  local: true do |f| %>
+<%= form_with model: @user, url: users_sign_up_confirm_path(@user), local: true do |f| %>
+  
+<div class='form-wrap'>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-<div class='form-wrap'>
-  
   <div class = "form-box">
     <%= image_tag "user.png", class:"newicon-image" %>
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">ニックネーム</label>
       </div>
-        <%= f.text_area :nickname, id:"nickname", placeholder:" 例) Tarou",  class:"input-default",maxlength:"40" %>
+        <%= f.text_field :nickname,class:"input-default", id:"nickname", placeholder:" 例) Tarou",  maxlength:"40" %>
     </div>
   </div>
 
