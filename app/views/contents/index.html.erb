@@ -15,19 +15,25 @@
       <ul class='content-lists'>
     <%# マイサブスク一覧表示 %>
       <% @content.each do |content| %>
-          <%# 画像 %>
-            <li class='all-list'>
-              <%= image_tag content.image, class: "content-img" %>
-            <%# タイトル %>
-              <div class='content-name'>
+      <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
+      <li >
+      <div class='all-list'>
+            <%# タイトル %><%# 金額 %>
+            <div class='content-title'>
+                 <P class='content-name'>
                  <%= content.name%>
-              </div>
-            <%# 金額 %>
-              <div class='content-price'>
-                <span><%= "¥#{content.price}" %></span>
-              </div>
-              <%= link_to image_tag('menu2.png' ,class: "content-edit") ,edit_content_path(content.id) %> 
-            </li>
+                 </p>
+                  <p class='content-price'>
+                  <%= "¥#{content.price}" %>
+                  </p>
+            </div>
+            <%# 画像 %>
+            <div >
+              <%= image_tag content.image, class: "content-img" %>
+            </div>
+      </div>
+      </li>
+        <% end %>
         <% end %>
       <%# マイサブスク一覧表示 %>
      </ul>
@@ -35,7 +41,7 @@
   <%# サブスクbody %>
 </div>
 
-
+<%= render "shared/footer" %>
     <% else %>
 
     <%# 未ログイン %>
@@ -100,5 +106,5 @@
  <%# ユーザーログイン有無で条件分岐 %>
 
 <!-- /.wrap --></div>
-<%= render "shared/footer" %>
+
 

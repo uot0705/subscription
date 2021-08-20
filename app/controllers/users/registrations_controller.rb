@@ -1,5 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
+  
 
 def destroy
   @user = User.find(params[:format]) 
@@ -12,6 +13,7 @@ end
     @user = User.new(user_params)
     render :new and return if params[:back]
     super
+    ThanxMailer.complete_registration(@user).deliver_now
   end
 
   def update_without_current_password(params)
@@ -40,6 +42,7 @@ end
 
   # 新規追加
   def complete
+    
   end
 
   # アカウント登録後

@@ -11,25 +11,28 @@
   justify-content:space-between;
   align-items: center; 
   margin:0 auto;
-  padding: 7vh;
+  padding: 0 3vw 2vh 3vw;
   width: 50%;
   height: 90%;
-  border-top:1px solid;
-  border-left:1px solid;
-  border-right:1px solid;
-  border-width:thick; 
   border-radius: 10px;
   border-color: #000;
   background:#F0F0F0;
   
+}
+
+.footer-left{
+  margin-left: 5vw;
 }
 .footer-left-m{
 
 }
 
 .footer-left-a{
-  
+  font-weight: bold; 
+  font-size: 30px;
 }
 .footer-light{
-  
+  margin-right: 5vw;
+  font-weight: bold; 
+  font-size: 30px;
 }

@@ -11,9 +11,7 @@
      <%# 金額 %>
      <div class="card__imgframe">
        <div class="price-content">
-         <div class="price-text">
-            <span>Price</span>
-          </div>
+            <p class="content-input-tite">Price</p>
           <div>
             <span class="sell-yen">¥</span>
             <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
@@ -25,7 +23,7 @@
     <%# TITLE %>
     <div class="card__textbox">
       <div class="card__overviewtext">
-       <h2>Title</h2>
+       <p class="content-input-tite">Title</p>
       </div>
       <%= f.text_area :name, class:"card__titletext", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
     </div>
@@ -40,10 +38,12 @@
 
     <%# TITLE %>
     <div class="card__textbox">
-      <div class="card__overviewtext">
-       <h2>Icon Image</h2>
+       <p class="content-input-tite">Icon Image</p>
+       <div class="card__overviewtext">
+       <h2 class = "current-imag" >現在のアイコン</h2>
+       <%= image_tag @content.image, class: "content-img-edit" %>
       </div>
-     <%= f.file_field :image, class:"card__titletext" ,id:"item-image" %>
+     <%= f.file_field :image,class:"card__titletext" ,id:"item-image" %>
     </div>
 
     <%# 下部ボタン %>

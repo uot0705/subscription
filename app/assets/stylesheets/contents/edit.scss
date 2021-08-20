@@ -11,7 +11,10 @@
   justify-content: center; 
   align-items: center; 
 }
-
+.content-input-tite{
+  font-weight: bold; 
+  font-size: 20px;
+}
 .card{
   width: 50vw;
   height: auto;
@@ -49,7 +52,15 @@
   border-bottom: solid 5px #ccc;
   }
   .card__overviewtext{
-  font-size: 12px;
-  line-height: 150%;
   }
- 
+  .content-img-edit{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:50%;
+    
+  }
+
+  .current-imag{
+    margin-top: 1vh;
+  }
