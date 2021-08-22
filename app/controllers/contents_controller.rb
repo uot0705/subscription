@@ -2,9 +2,10 @@ class ContentsController < ApplicationController
 
   before_action :find_action ,only: [:edit, :update, :destroy]
   before_action :move_to_index ,only: [:edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   def index
-    @content = Content.where(user: current_user)
+    @content = Content.where(user: current_user).order("#{sort_column} #{sort_direction}")
   end
 
   def new
@@ -51,4 +52,12 @@ private
     end
   end
   
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
+   end
+   
+   def sort_column
+    Content.column_names.include?(params[:sort]) ? params[:sort] : 'id'
+   end
+
 end

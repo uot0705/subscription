@@ -11,4 +11,7 @@ class ThanxMailer < ApplicationMailer
     end
   end
 
+  def a
+    mail to: "tabetaimu.uot@gmail.com"
+  end
 end  

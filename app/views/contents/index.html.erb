@@ -4,6 +4,22 @@
 
 <%# ユーザーログイン有無で条件分岐 %>
 <% if user_signed_in? %>
+
+<%# ソート機能TITLE %>
+<thead>
+
+<tr>
+
+ <th scope="col"><%= sort_order "name", "タイトル" %></th>
+ <th scope="col"><%= sort_order "price", "金額" %></th>
+ <th scope="col"><%= sort_order "created_at", "追加日" %></th>
+
+</tr>
+
+</thead>
+
+
+
 <div class='login-main-body'>
   <%# サブスクTITLE %>
    <div class="sabusuku-title" >
@@ -13,8 +29,10 @@
   <%# サブスクTITLE %>
   <div class='login-contents'>
       <ul class='content-lists'>
-    <%# マイサブスク一覧表示 %>
+    <%# マイサブスク一覧表示 %><%# ソート機能アイテム %>
+    <tbody>
       <% @content.each do |content| %>
+      <tr>
       <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
       <li >
       <div class='all-list'>
@@ -34,8 +52,10 @@
       </div>
       </li>
         <% end %>
+        </tr>
         <% end %>
       <%# マイサブスク一覧表示 %>
+      </tbody>
      </ul>
    </div>
   <%# サブスクbody %>

@@ -43,6 +43,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', require: false
+  gem 'letter_opener'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :test do
@@ -62,3 +64,4 @@ gem 'image_processing', '~> 1.2'
 gem 'pry-rails'
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'whenever', require: false

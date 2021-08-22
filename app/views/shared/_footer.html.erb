@@ -1,13 +1,33 @@
+
 <footer class="footer">
+
   <div class='footer-price'>
 
     <div class = "footer-left">
-    <p class = "footer-left-m">Monthly</p>
-    <p class = "footer-left-a">Average</p>
+
+   
+    <p class = "footer-left-m"> ▷Monthly</p>
+    <p class = "footer-left-a">Average</p> 
     </div>
+
     <div class = "footer-light">
-    <%= "¥#{@content.sum(:price)}" %>
+    <p class ="totale,price"><%= "¥#{@content.sum(:price)}" %></p>
     </div>
-    
   </div>
+
+        <%# button変更 #%>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      $('.footer-left-m').on('click', function () {
+      if ($(this).text() === '▷Monthly') {
+            $(this).text('▷Week');
+          } else if ($(this).text() === '▷Week')  {
+            $(this).text('▷Day');
+          }else{
+            $(this).text('▷Monthly');
+          }
+      });
+      </script>
+
+
 </footer>
