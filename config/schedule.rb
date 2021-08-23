@@ -4,14 +4,14 @@
 # http://en.wikipedia.org/wiki/Cron
 
 require File.expand_path(File.dirname(__FILE__) + '/environment')
-
+env 'PATH', ENV['PATH']
 rails_env = ENV['RAILS_ENV'] || :development
 set :output, "#{Rails.root}/log/cron.log"
 # ジョブの実行環境の指定
 set :environment, rails_env
 
 every 1.minutes do
-  runner  "ThanxMailer.a.deliver_now" 
+  rake "thanxmailer_a:thanxmailer_a" 
 end
 
 # set :output, "/path/to/my/cron_log.log"
