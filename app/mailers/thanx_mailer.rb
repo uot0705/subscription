@@ -11,7 +11,10 @@ class ThanxMailer < ApplicationMailer
     end
   end
 
-  def a
-    mail to: "tabetaimu.uot@gmail.com"
+  def a(user)
+    @user = user
+    @content = Content.where(user: @user)
+    mail to: @user.email, subject: "【お知らせ】サブスク契約内容"
   end
+
 end  

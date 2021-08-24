@@ -1,0 +1,6 @@
+class ThanxMailersController < ApplicationController
+  
+ 
+
+
+end

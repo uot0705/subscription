@@ -6,6 +6,6 @@ rails_env = ENV['RAILS_ENV'] || :development
 set :output, "#{Rails.root}/log/cron.log"
 set :environment, rails_env
 
-every 1.minutes do
+every 1.day, :at => '5:00 pm' do
   rake "thanxmailer_a:thanxmailer_a" 
 end

@@ -98,7 +98,7 @@ Rails.application.configure do
     :port => '587',
     :domain => 'smtp.gmail.com',
     :authentication => 'plain',
-    :user_name => 'uot2345906abc@gmail.com',
+    :user_name => 'sabusuku.kanri.info@gmail.com',
     :password => 'xqnqevavcekxjufp'
   }
 

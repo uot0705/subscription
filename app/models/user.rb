@@ -14,5 +14,5 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX, allow_blank: true, on: :update
 
   
-
+  
 end
