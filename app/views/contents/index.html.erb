@@ -4,7 +4,7 @@
 
 <%# ユーザーログイン有無で条件分岐 %>
 <% if user_signed_in? %>
-
+ 
 <%# ソート機能TITLE %>
 <thead>
 
@@ -42,7 +42,7 @@
                  <%= content.name%>
                  </p>
                   <p class='content-price'>
-                  <%= "¥#{content.price}" %>
+                  <%= "¥#{number_to_currency(content.price)}" %>
                   </p>
             </div>
             <%# 画像 %>

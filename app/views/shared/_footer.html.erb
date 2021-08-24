@@ -11,7 +11,8 @@
     </div>
 
     <div class = "footer-light" id ="totale-price">
-    <p class ="totale-price" id ="totale-price" ><%= "¥#{@content.sum(:price)}" %></p>
+    <p class ="totale-price" id = 't-price' ><%= "¥#{number_to_currency(@content.sum(:price))}" %></p>
+   
     </div>
 
   </div>
@@ -23,7 +24,7 @@
 
         if ($(this).text() === '▷Monthly') {
               $(this).text('▷Yearly');
-              $('#totale-price').html("<%= escape_javascript(render 'price.y') %>");
+              $('#totale-price').html("<%= escape_javascript(render 'price.y') %>");        
             } else if ($(this).text() === '▷Yearly'){
                $(this).text('▷Day');
               $('#totale-price').html("<%= escape_javascript(render 'price.d') %>");
@@ -42,94 +43,7 @@
     <%# カンマ付与 %>
 
     <script>
-    $(function() {
-    var priceCommaData    = '';
-    var priceNonCommaData = '';
 
-    /**
-     * フォーカス
-     */
-    $('#totale-price').on('focus', function() {
-        priceCommaData    = $(this).val(); // 入力値取得
-        priceNonCommaData = removeComma(priceCommaData); // カンマ削除
-
-        $(this).val(priceNonCommaData); // 反映
-    });
-
-
-    /**
-     * フォーカスアウト
-     */
-    $('#totale-price').on('blur', function() {
-        priceNonCommaData = $(this).val(); // 入力値取得
-        priceCommaData    = addComma(priceNonCommaData); // カンマ付与
-
-        $(this).val(priceCommaData); // 反映
-    });
-
-
-    /**
-     * カンマの追加
-     */
-    $(function addComma(priceNonCommaData) {
-        var priceCommaData = '';
-
-        /**
-         * 正規表現
-         * \d        => 半角数字
-         * \d{3}     => 3桁の半角数字
-         * ?=(\d{3}) => \dの後ろに\d{3}がある
-         * +(?!\d)   => \d{3}の後ろに\dがない
-         * g         => マッチしたべての部分文字列を置換
-         * $1        => 変数
-         *           => カッコ()で囲われた部分を$1に代入
-         * 
-         * 1234の場合の$1 => 1
-         * 1234の場合の$2 => 234
-         * https://regexr.com/
-         */   
-        priceCommaData = priceNonCommaData.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-
-        // 小数点以下のカンマを削除
-        if (priceCommaData.search(/\./) !== -1) { // 小数点が含まれている場合
-            priceCommaData = removeFloatComma(priceCommaData);
-        }
-
-        return priceCommaData;
-    })
-
-    /**
-     * カンマの削除
-     */
-    $(function removeComma(priceCommaData) {
-        var priceNonCommaData = '';
-        priceNonCommaData = priceCommaData.replace(/,/g, ''); // 入力時のカンマを削除
-        return priceNonCommaData;
-    })
-
-    /**
-     * 小数点以下のカンマの削除
-     */
-    $(function removeFloatComma(priceCommaData) {
-        var priceDotBefore = '';
-        var priceDotAfter  = '';
-
-        // 小数点までを取得
-        priceDotBefore = priceCommaData.match(/(.*)\./);
-        priceDotBefore = priceDotBefore[0];
-        priceDotBefore = priceDotBefore.replace(/\./g, '')
-
-        // 小数点以降を取得
-        priceDotAfter = priceCommaData.match(/\.(.*)/);
-        priceDotAfter = priceDotAfter[0];
-        priceDotAfter = priceDotAfter.replace(/\,/g, '');
-
-        // 小数点前と小数点後を結合
-        priceCommaData = priceDotBefore + priceDotAfter;
-
-        return priceCommaData;
-    })
-    });
 </script>
 
 </footer>
