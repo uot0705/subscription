@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><%= "#{@user.nickname}さん" %></p>
+
+    <p>いつも、サブスクの管理をご利用頂きありがとうございます。</p>
+    <p><%= "今回の連絡は、現在#{@user.nickname}さんが契約しているサブスク内容のお知らせになります。"%></p>
+    
+    <pre>
+    【契約内容】
+     <% @content.each do |content| %>
+     <%= content.name %>:<%= "¥#{content.price}" %>
+    <% end %>
+    </pre>
+
+    <pre>
+    <%= "契約数:#{@content.count}" %>
+    <%= "合計金額:¥#{@content.sum(:price)}" %>
+   <pre>
+<p> 契約していないサブスクは、下記リンクから解約しましょう。</p>
+
+----------------------------------------------
+Sabusuku no Kanri運営事務局
+https://subscription-0705.herokuapp.com/
+お問い合わせ先：sabusuku.kanri.info@gmail.com
+----------------------------------------------
+
+  </body>
+</html>

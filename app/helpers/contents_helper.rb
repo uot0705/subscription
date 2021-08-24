@@ -8,7 +8,7 @@ module ContentsHelper
   end
 
     def number_to_currency(price)
-      "#{price.to_s(:delimited, delimiter: ',')}円"
+      "#{price.to_s(:delimited, delimiter: ',')}"
     end
 
 end

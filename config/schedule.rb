@@ -6,6 +6,17 @@ rails_env = ENV['RAILS_ENV'] || :development
 set :output, "#{Rails.root}/log/cron.log"
 set :environment, rails_env
 
-every 1.day, :at => '5:00 pm' do
+# 毎月1日の9:30に起動(月１)
+every '30 9 1 * *' do
   rake "thanxmailer_a:thanxmailer_a" 
+end
+
+# 毎月1日の9:30に起動(月２)
+every '30 9 1 * *' do
+  rake "thanxmailer_b:thanxmailer_b" 
+end
+
+# 毎月15日の9:30に起動(月２)
+every '30 9 15 * *' do
+  rake "thanxmailer_c:thanxmailer_c" 
 end

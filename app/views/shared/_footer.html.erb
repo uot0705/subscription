@@ -17,33 +17,44 @@
 
   </div>
 
-        <%# button変更 #%>
+        <%# 【非同期通信】期間、合計金額 #%>
     <script>
 
       $('.footer-left-m').on('click', function () {
 
         if ($(this).text() === '▷Monthly') {
-              $(this).text('▷Yearly');
-              $('#totale-price').html("<%= escape_javascript(render 'price.y') %>");        
+             $(this).text('▷Yearly');  //期間
+              $('#totale-price').html("<%= escape_javascript(render 'price.y') %>");    //合計金額 
+              var price2 = $("#t-price").html();　                                      //ここから。カンマ
+              price2 = price2 * 10; 
+              price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
+              $("#t-price").html(price2);　　　　　　　　　　　　　　　　　　　　　　　　　　　 //ここまで。カンマ
             } else if ($(this).text() === '▷Yearly'){
                $(this).text('▷Day');
               $('#totale-price').html("<%= escape_javascript(render 'price.d') %>");
+               var price2 = $("#t-price").html();　
+              price2 = price2 * 10; 
+              price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
+              $("#t-price").html(price2);
             } else if ($(this).text() === '▷Day'){
               $(this).text('▷Week');
               $('#totale-price').html("<%= escape_javascript(render 'price.w') %>");
+               var price2 = $("#t-price").html();　
+              price2 = price2 * 10; 
+              price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
+              $("#t-price").html(price2);
             }else{
               $(this).text('▷Monthly');
               $('#totale-price').html("<%= escape_javascript(render 'price.m') %>");
+               var price2 = $("#t-price").html();　
+              price2 = price2 * 10; 
+              price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
+              $("#t-price").html(price2);
             }
 
       });
 
-    </script>
 
-    <%# カンマ付与 %>
-
-    <script>
-
-</script>
+　　</script>
 
 </footer>
