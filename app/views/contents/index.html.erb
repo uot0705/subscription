@@ -6,33 +6,34 @@
 <% if user_signed_in? %>
  
 <%# ソート機能TITLE %>
-<thead>
-
-<tr>
-
- <th scope="col"><%= sort_order "name", "タイトル" %></th>
- <th scope="col"><%= sort_order "price", "金額" %></th>
- <th scope="col"><%= sort_order "created_at", "追加日" %></th>
-
-</tr>
-
-</thead>
 
 
 
 <div class='login-main-body'>
+  
   <%# サブスクTITLE %>
-   <div class="sabusuku-title" >
+  <div class="sabusuku-title" >
      <h2 class='sabusuku-title-name'>Subscription</h2>
      <%= link_to 'サブスク登録', new_content_path, class: "content-new" %></li>
-    </div>
-  <%# サブスクTITLE %>
+  </div>
+  <%# マイサブスク一覧表示 %>
   <div class='login-contents'>
-      <ul class='content-lists'>
-    <%# マイサブスク一覧表示 %><%# ソート機能アイテム %>
-    <tbody>
-      <% @content.each do |content| %>
-      <tr>
+    <div class="content-sort">
+    <p class='sort-title'>並び替え<p>
+    <div class ="sort-list">
+        <thead >
+          <tr >
+            <th scope="col"><%= sort_order "name", "タイトル" %></th>
+            <th scope="col"><%= sort_order "price", "金額" %></th>
+            <th scope="col"><%= sort_order "created_at", "追加日" %></th>
+          </tr>
+        </thead>
+      </div>
+    </div>
+    <ul class='content-lists'>
+    <tbody><%# ソート機能 %>
+    <% @content.each do |content| %>
+    <tr>
       <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
       <li >
       <div class='all-list'>
@@ -46,85 +47,80 @@
                 </p>
             </div>
             <%# 画像 %>
-            <div >
-            <%= image_tag content.image, class: "content-img" %>
-            </div>
-      </div>
-      </li>
-        <% end %>
-        </tr>
-        <% end %>
-      <%# マイサブスク一覧表示 %>
-      </tbody>
+            <div>
+            <% if content.image.present? %>
+            　<%= image_tag content.image, class: "content-img" %>
+            <% else %>
+            <%= image_tag "mitoukou", class: "content-img" %>
+            <% end %>
+          </div>
+       </div>
+       </li>
+       <% end %>
+    </tr>
+    <% end %>
+    </tbody>
      </ul>
    </div>
   <%# サブスクbody %>
 </div>
 
 <%= render "shared/footer" %>
+</div>
     <% else %>
-
+<div class="top-pege">
     <%# 未ログイン %>
-<div class='main-body'>
-  <div class='left-body'>
-    <div class='left-body-box'>
-      <p class= 'body-title' id="anime">サブスクの管理、</p>
-      <p class= 'body-title2' >はじめよう。</p>
-     <div class='main-image'>
-      <%= image_tag "sumahofree.jpeg", class:"left-body-image" %>
-     </div>
+  <div class='main-body'>
+      <div class='left-body'>
+        <div class='left-body-box'>
+          <p class= 'body-title' id="anime">サブスクの管理、</p>
+          <p class= 'body-title2' >はじめよう。</p>
+        <div class='main-image'>
+          <%= image_tag "sumahofree.jpeg", class:"left-body-image" %>
+        </div>
+        </div>
     </div>
-  </div>
 
-  <div class='light-body' >
-  <%#アニメイメージ%>
-      <div class= "light-image-top">
-      <%= image_tag "hukidasi", class:"hukidasi-image" %>
+    <%= render "anime" %>
+</div>
 
-      <%#吹き出し中%>
-      <div class= "light-image-bottom">
-          <%= image_tag "haitatu.jpeg", class:"anime-image" %>  
-      </div>
-        <div class= "light-image-bottom2">
-          <%= image_tag "video.jpeg", class:"anime-image2" %>
-        </div>
-         
-        <div class= "light-image-bottom3">
-          <%= image_tag "music.jpeg", class:"anime-image3" %>
-        </div>
-          
-        <div class= "light-image-bottom4">
-          <%= image_tag "resutoran.jpeg", class:"anime-image4" %>
-        </div>
-
-        <div class= "light-image-bottom5">
-           <%= image_tag "cock.jpeg", class:"anime-image5" %>
-        </div>
-
-        <div class= "light-image-bottom6">
-          <%= image_tag "radio.jpeg", class:"anime-image6" %>
-        </div>
-
-        <div class= "light-image-bottom7">
-          <%= image_tag "game.jpeg", class:"anime-image7" %>
-        </div>
-       <%#吹き出し中%>
-       
-        <%= image_tag "netsafin.jpeg", class:"netosa-image" %>
+  <div class="footer-content-top">
+    <footer class="footer-mlogin">
+      <div class="footer-content">
+          <div class="left-footer">
+            <%= image_tag "happy-meil.jpeg", class:"footer-image-mail" %>
+            <div class="footer-image-bottom">
+            <%= image_tag "happy-w.jpeg", class:"footer-image" %>
+            <%= image_tag "happy-m.jpeg", class:"footer-image" %>
+            </div>
           </div>
-      <%#アニメイメージ%>
-        <div class = 'body-lists' id= "toptitle4">
-          <p>Let's get started</p>
-            <ul class="new-buttons"  >
-                <li class='usernew-list'><%= link_to '新規登録', new_user_registration_path, class: "new-link" %></li>
-                <li class='usernew-list'><%= link_to 'ログイン', new_user_session_path, class: "new-link" %></li>
-            </ul>
-        </div>
-   </div>
+
+          <div class="right-footer">
+            <p class="footer-title">サブスクを使いこなし</p>
+            <p class="footer-title2">暮らしをハッピーに。</p>
+            
+            <p class="footer-title-bottom">サブスクの管理なら、毎月の契約状況を自動でお知らせが受けられます。</p>
+            <p class="footer-title-bottom">サブスクを使いこなすには、契約の把握から始めましょう。</p>
+            </pre>
+          </div>
+       
+      </footer>
+ </div> 
+      
 
  <% end %> 
  <%# ユーザーログイン有無で条件分岐 %>
 
-<!-- /.wrap --></div>
+ <script>
+    $(function(){
+      $('.sort-list').hide();
+      $('.sort-title').on('click', () => {
+        $('.sort-list').toggle();
+        });
+    });
+
+  </script>
+
+
 
 

@@ -38,11 +38,14 @@
     </div>
 </div>
 
-<div class="actions">
+<div class="edit-actions">
     <%= f.submit "更新" , :class=> "submit-botan" %>
-   
+</div>
+
+  <div class="edit-dellet">
+  <%= link_to "退会", user_registration_path(current_user.id) ,method: :delete, class: "user-delete-botan", "data-confirm" => "本当に退会しますか？"%>
   </div>
-   <%= link_to "退会", user_registration_path(current_user.id) ,method: :delete, class: "user-delete-botan", "data-confirm" => "本当に退会しますか？"%>
+
 </div>
 <% end %>
 

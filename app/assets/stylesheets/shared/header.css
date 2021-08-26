@@ -1,3 +1,4 @@
+@media (min-width: 1025px) {
 .top-page-header {
   width: 100vw;
   display: flex;
@@ -14,12 +15,90 @@
 
 .header-user{
   margin-left:auto;
-  padding: 5vh 5vh 0 0;
+  padding: 5vh 5vw 0 0;
 }
 
+.user-title{
+  display: flex;
+}
+.header-aisatu{
+  color: #000;
+  font-size: 3vh;
+}
 .header-nickname{
   color: #000;
-  margin-left:auto;
   font-size: 3vh;
+  border-bottom:1px solid;
+  margin-right: 1vw;
+}
+.header-nickname-m{
+  color: #000;
+  font-size: 3vh;
+  margin-right: 1vw;
+}
+.user-menu{
+  margin: 1vh;
+  padding-left: 5vw;
+}
+.user-menu-li {
+  color: #FFF;
+  background-color: #000;
+ font-size: 2vh;
  text-decoration:none; 
+ padding: 1vh ;
+ border-radius: 10px;
+}
+
+}
+
+@media (max-width: 599px) {
+  .top-page-header {
+    width: 100vw;
+    display: flex;
+  }
+  
+  .title-contents{
+    margin:3vh 0 1vh 4vw;
+    font-weight: bolder; 
+  }
+  .title-contents-image{
+    height: 12vh;
+    width: 32vw;
+  }
+  
+  .header-user{
+    margin-left:auto;
+    padding: 5vh 5vw 0 0;
+  }
+  
+  .user-title{
+    display: flex;
+  }
+  .header-aisatu{
+    color: #000;
+    font-size: 2vh;
+  }
+  .header-nickname{
+    color: #000;
+    font-size: 2vh;
+    border-bottom:1px solid;
+    margin-right: 1vw;
+  }
+  .header-nickname-m{
+    color: #000;
+    font-size: 3vh;
+    margin-right: 1vw;
+  }
+  .user-menu{
+    margin: 1vh;
+    padding-left: 5vw;
+  }
+  .user-menu-li {
+    color: #FFF;
+    background-color: #000;
+   font-size: 1vh;
+   text-decoration:none; 
+   padding: 1vh ;
+   border-radius: 10px;
+  }
 }

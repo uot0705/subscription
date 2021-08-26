@@ -6,7 +6,7 @@
   <h2 class="views-title">サブスク編集</h2>
   <%= form_with model: @content,  local: true do |f| %>
  <%= render 'shared/error_messages', model: f.object %>
-    <div class="card">
+  <div class="card">
 
      <%# 金額 %>
      <div class="card__imgframe">
@@ -14,7 +14,7 @@
             <p class="content-input-tite">Price</p>
           <div>
             <span class="sell-yen">¥</span>
-            <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+            <%= f.text_field :price,  placeholder:"例）300" %>
           </div>
         </div>
       </div>
@@ -25,25 +25,17 @@
       <div class="card__overviewtext">
        <p class="content-input-tite">Title</p>
       </div>
-      <%= f.text_area :name, class:"card__titletext", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_field :name, class:"card__titletext",  placeholder:"商品名（必須 20文字まで)", maxlength:"40" %>
     </div>
 
-   <%#div class="card__textbox">
-      <div class="card__overviewtext">
-       Cycle
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :cycle, class:"card__titletext", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
-    <%#/div%>
-
-    <%# TITLE %>
+    <%# 画像 %>
     <div class="card__textbox">
        <p class="content-input-tite">Icon Image</p>
        <div class="card__overviewtext">
        <h2 class = "current-imag" >現在のアイコン</h2>
        <%= image_tag @content.image, class: "content-img-edit" %>
       </div>
-     <%= f.file_field :image,class:"card__titletext" ,id:"item-image" %>
+     <%= f.file_field :image,class:"card__titletext"  %>
     </div>
 
     <%# 下部ボタン %>

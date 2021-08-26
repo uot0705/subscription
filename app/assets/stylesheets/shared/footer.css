@@ -1,3 +1,4 @@
+@media (min-width: 1025px) {
 .footer{
   position: fixed;
   bottom: 0;
@@ -34,6 +35,315 @@
 .footer-light{
   margin-right: 5vw;
   font-weight: bold; 
-  font-size: 30px;
+  font-size: 2vw;
   display: flex;
+}
+
+/* 未ログイン*/
+.top-pege{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.footer-content-top{
+  width: 100%;
+}
+.footer-mlogin{
+  width: 100%;
+}
+.footer-content{
+  width: 70%;
+  padding: 5vh 0;
+  border:1px solid;
+  display: flex;
+  margin:0 auto;
+  animation-name:anime13;
+  animation-duration:0.5s; 
+  animation-delay: 3.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime13 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+
+.left-footer{
+  width: 50%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+.footer-image-mail{
+  height: 11vh;
+  width: 5vw;
+}
+.footer-image{
+  height: 15vh;
+  width: 5vw;
+}
+.right-footer{
+  width: 50%;
+}
+.footer-title{
+  color: #000;
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.footer-title2{
+  color: #000;
+  font-size: 4vh;
+  font-weight: bold;
+  padding: 0 0 2vh 0;
+}
+.footer-title-bottom{
+  font-size: 2vh;
+  padding: 0 0 1vh 0;
+}
+}
+
+@media (max-width: 1024px) {
+
+  .footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 14%;
+    
+  }
+  .footer-price{
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    margin:0 auto;
+    padding: 0 3vw 2vh 3vw;
+    width: 50%;
+    height: 90%;
+    border-radius: 10px;
+    border-color: #000;
+    background:#F0F0F0;
+  }
+  .footer-left{
+    margin-left: 5vw;
+  }
+  .footer-left-m{
+    font-size: 2vw;
+  }
+  
+  .footer-left-a{
+    font-weight: bold; 
+    font-size: 3vw;
+  }
+  .footer-light{
+    margin-right: 5vw;
+    font-weight: bold; 
+    font-size: 4vw;
+    display: flex;
+  }
+
+
+
+/* 未ログイン*/
+.top-pege{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  
+}
+
+.footer-content-top{
+  width: 100%;
+  margin-top: 5vh;
+}
+.footer-mlogin{
+  width: 100%;
+}
+.footer-content{
+  width: 70%;
+  padding: 5vh 0;
+  border:1px solid;
+  display: flex;
+  margin:0 auto;
+  opacity:0;
+  animation-name:anime13;
+  animation-duration:0.5s; 
+  animation-delay: 3.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime13 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+.left-footer{
+  width: 50%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+.footer-image-mail{
+  height: 6vh;
+  width: 8vw;
+  padding-bottom: 2vh;
+}
+.footer-image{
+  height: 10vh;
+  width: 10vw;
+}
+.right-footer{
+  width: 50%;
+}
+.footer-title{
+  color: #000;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.footer-title2{
+  color: #000;
+  font-size: 3vw;
+  font-weight: bold;
+  padding: 0 0 2vh 0;
+}
+.footer-title-bottom{
+  font-size: 2vw;
+  padding: 0 0 1vh 0;
+}
+}
+
+@media (max-width: 599px) { 
+  .footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 14%;
+    
+  }
+  .footer-price{
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    margin:0 auto;
+    padding: 0 3vw 2vh 3vw;
+    width: 50%;
+    height: 90%;
+    border-radius: 10px;
+    border-color: #000;
+    background:#F0F0F0;
+  }
+  .footer-left{
+    margin-left: 5vw;
+  }
+  .footer-left-m{
+    font-size: 2vw;
+  }
+  
+  .footer-left-a{
+    font-weight: bold; 
+    font-size: 3vw;
+  }
+  .footer-light{
+    margin-right: 5vw;
+    font-weight: bold; 
+    font-size: 4vw;
+    display: flex;
+  }
+
+
+
+/* 未ログイン*/
+.top-pege{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  
+}
+
+.footer-content-top{
+  width: 100%;
+  margin-top: 5vh;
+}
+.footer-mlogin{
+  width: 100%;
+}
+.footer-content{
+  width: 70%;
+  padding: 5vh 0;
+  border:1px solid;
+  display: flex;
+  margin:0 auto;
+  opacity:0;
+  animation-name:anime13;
+  animation-duration:0.5s; 
+  animation-delay: 3.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ @keyframes anime13 {
+  0% {
+  opacity: 0;
+  transform: translateY(0px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+  }
+
+.left-footer{
+  width: 50%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+.footer-image-mail{
+  height: 6vh;
+  width: 8vw;
+  padding-bottom: 2vh;
+}
+.footer-image{
+  height: 10vh;
+  width: 10vw;
+}
+.right-footer{
+  width: 50%;
+}
+.footer-title{
+  color: #000;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.footer-title2{
+  color: #000;
+  font-size: 3vw;
+  font-weight: bold;
+  padding: 0 0 2vh 0;
+}
+.footer-title-bottom{
+  font-size: 2vw;
+  padding: 0 0 1vh 0;
+}
 }

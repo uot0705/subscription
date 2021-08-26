@@ -1,5 +1,12 @@
+@media (min-width: 1025px) {
 body{
   width: 100vw;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 }
 
 .wrap {
@@ -12,6 +19,116 @@ body{
   box-sizing: border-box;
 }
 
+/*ログイン済*/
+.content-sort th{
+  color: #000;
+ text-decoration:none; 
+
+}
+
+.login-main-body{
+  width: 100vw;
+  height: 70%;
+}
+.login-contents{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.sabusuku-title{
+  width: 100vw;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;  
+  margin-bottom: 2vh;
+}
+
+.sabusuku-title-name{
+  margin-left: 20vw;
+  font-size: 60px;
+}
+
+.content-new{
+  color: #FFF;
+  background-color: #000;
+ font-size: 3vh;
+ text-decoration:none; 
+ padding: 2vh ;
+ margin-right: 25vw;
+ border-radius: 10px;
+}
+.content-sort{
+  width: 25%;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content:space-between;
+  align-items: center;  
+}
+.sort-title{
+  color: #000;
+ font-size: 2vh;
+ text-decoration:none; 
+ border-bottom:1px solid;
+ border-color: #000;
+
+}
+.sort-list{
+  margin: 3vh 0 1vh 0;
+}
+a.sorter {
+  color: #FFF;
+  background-color: #000;
+ font-size: 2vh;
+ text-decoration:none; 
+ padding: 1vh ;
+ border-radius: 10px;
+}
+/*コンテンツ一覧表示*/
+.sabusuku-titlename{
+
+}
+
+.content-title{
+  width: 100%;
+  padding: 2vh 0 0 2vh;
+}
+.all-list{
+  width: 20vw;
+  height: 27vh;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content:space-between;
+  border:1px solid;
+  border-radius: 10px;
+  border-color: #000;
+}
+
+
+.content-img{
+  width:9vw;
+	height:17vh;
+	object-fit:cover;
+	border-radius:50%;
+  margin: 5vh 1vw 0 0;
+  
+}
+.content-name{
+  
+}
+.content-price{
+  font-weight: 900; 
+  font-size: 2vw;
+  
+}
+.content-edit{
+  text-decoration: none;
+  color: #000;
+}
+
+/*未ログイン*/
 .main-body{
   width: 100vw;
   display: flex;
@@ -23,10 +140,12 @@ body{
   flex-direction: column; 
   justify-content: center; 
   align-items: center;  
+
 }
+
 .left-body-box{
   font-weight: bolder; 
-  padding: 0 0 10vw 0;
+  padding: 0 0 10vw 8vw;
 }
 
 .body-title {
@@ -143,7 +262,7 @@ body{
 .anime-image{
   height: 8vh;
   width: 3vw;
-  padding: 5vh 0 0 14vw;
+  padding: 5vh 0 0 13vw;
   opacity:0;
   animation-name:anime7;
   animation-duration:0.5s; 
@@ -170,7 +289,7 @@ body{
   .anime-image2{
     height: 8vh;
     width: 3vw;
-    padding: 13vh 0 0 18vw;
+    padding: 13vh 0 0 17vw;
     opacity:0;
     animation-name:anime6;
     animation-duration:0.5s; 
@@ -197,7 +316,7 @@ body{
   .anime-image3{
     height: 8vh;
     width: 3vw;
-    padding: 5vh 0 0 22vw;
+    padding: 5vh 0 0 21vw;
   opacity:0;
   animation-name:anime8;
   animation-duration:0.5s; 
@@ -224,7 +343,7 @@ body{
   .anime-image4{
     height: 8vh;
     width: 3vw;
-    padding: 15vh 0 0 25vw;
+    padding: 15vh 0 0 24vw;
     opacity:0;
     animation-name:anime8;
     animation-duration:0.5s; 
@@ -251,7 +370,7 @@ body{
   .anime-image5{
     height: 8vh;
     width: 3vw;
-    padding: 23vh 0 0 20vw;
+    padding: 23vh 0 0 18vw;
     opacity:0;
     animation-name:anime9;
     animation-duration:0.5s; 
@@ -278,7 +397,7 @@ body{
   .anime-image6{
     height: 8vh;
     width: 3vw;
-    padding: 18vh 0 0 13vw;
+    padding: 18vh 0 0 12vw;
     opacity:0;
     animation-name:anime10;
     animation-duration:0.5s; 
@@ -305,7 +424,7 @@ body{
   .anime-image7{
     height: 8vh;
     width: 3vw;
-    padding: 10vh 0 0 10vw;
+    padding: 10vh 0 0 9vw;
     opacity:0;
     animation-name:anime11;
     animation-duration:0.5s; 
@@ -360,6 +479,9 @@ body{
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+.let-start{
+  font-size: 30px;
+}
  @keyframes anime12 {
   0% {
   opacity: 0;
@@ -375,7 +497,7 @@ body{
   display: flex;
   justify-content:space-between;
   align-items: center; 
-   
+  margin-top: 5vh;
 }
 
 
@@ -392,78 +514,1024 @@ body{
  border-radius: 10px;
  
 }
-
-/*ログイン後*/
-.login-main-body{
-  width: 100vw;
-  height: 70%;
-}
-.login-contents{
-  
-}
-.sabusuku-title-name{
-  margin-left: 10vw;
-  font-size: 60px;
-}
-.sabusuku-title{
-  width: 100vw;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;  
-  margin-bottom: 2vh;
-}
-.login-button{
-  padding: 0 5vw;
-  margin: 0 0 3vh 0;
-  text-align: center;
-}
-/*コンテンツ一覧表示*/
-.sabusuku-titlename{
-
-}
-.content-new{
-  color: #FFF;
-  background-color: #000;
- font-size: 3vh;
- text-decoration:none; 
- padding: 2vh ;
- margin-right: 15vw;
- border-radius: 10px;
-}
-.content-title{
-  padding: 2vh 0 0 2vh;
-}
-.all-list{
-  width: 20vw;
-  height: 25vh;
-  margin:0 auto;
-  display: flex;
-  justify-content:space-between;
-  
-
-  border:1px solid;
-  border-radius: 10px;
-  border-color: #000;
 }
 
+//タブレット表示
 
-.content-img{
-  width:180px;
-	height:180px;
-	object-fit:cover;
-	border-radius:50%;
-  margin: 5vh 1vw 0 0;
+@media (max-width: 1024px) {
+  body{
+    width: 100vw;
+    font-family: "Helvetica Neue",
+      Arial,
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      Meiryo,
+      sans-serif;
+  }
   
-}
-.content-name{
+  .wrap {
+    overflow: hidden;
+    position: relative;
+  /*ヘッダーの位置調整*/
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 15vh;
+    box-sizing: border-box;
+  }
   
-}
-.content-price{
-  font-weight: 900; 
-  font-size: 30px;
+  /*ログイン済*/
+  .content-sort th{
+    color: #000;
+   text-decoration:none; 
   
+  }
+  
+  .login-main-body{
+    width: 100vw;
+    height: 70%;
+  }
+  .login-contents{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .sabusuku-title{
+    width: 100vw;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;  
+    margin-bottom: 2vh;
+  }
+  
+  .sabusuku-title-name{
+    margin-left: 15vw;
+    font-size: 40px;
+  }
+  
+  .content-new{
+    color: #FFF;
+    background-color: #000;
+   font-size: 2vh;
+   text-decoration:none; 
+   padding: 2vh ;
+   margin-right: 20vw;
+   border-radius: 10px;
+  }
+  .content-sort{
+    width: 25%;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content:space-between;
+    align-items: center;  
+  }
+  .sort-title{
+    color: #000;
+   font-size: 2vh;
+   text-decoration:none; 
+   border-bottom:1px solid;
+   border-color: #000;
+  
+  }
+  .sort-list{
+    margin: 3vh 0 1vh 0;
+  }
+  a.sorter {
+    color: #FFF;
+    background-color: #000;
+   font-size: 1vh;
+   text-decoration:none; 
+   padding: 1vh ;
+   border-radius: 10px;
+  }
+  /*コンテンツ一覧表示*/
+  .sabusuku-titlename{
+  
+  }
+  
+  .content-title{
+    width: 100%;
+    padding: 2vh 0 0 2vh;
+  }
+  .all-list{
+    width: 30vw;
+    height: 20vh;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content:space-between;
+    border:1px solid;
+    border-radius: 10px;
+    border-color: #000;
+  }
+  
+  
+  .content-img{
+    width:14vw;
+    height:11vh;
+    object-fit:cover;
+    border-radius:50%;
+    margin: 5vh 1vw 0 0;
+    
+  }
+  .content-name{
+    font-size: 1vw;
+  }
+  .content-price{
+    font-weight: 900; 
+    font-size: 3vw;
+  }
+  .content-edit{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /*未ログイン*/
+  .main-body{
+    width: 100vw;
+    display: flex;
+  }
+  .left-body{
+    width: 50%;
+  
+  }
+  .left-body-box{
+    font-weight: bolder; 
+    padding-top: 5vh;
+  }
+  
+  .body-title {
+    color: #000;
+   font-size: 5vw;
+   text-decoration:none; 
+   padding-left: 7vw;
+  
+   opacity:0;
+    animation-name:anime1;
+    animation-duration:0.5s; 
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes anime1 {
+    0% {
+     opacity: 0;
+     transform: translateY(30px);
+    }
+      100%{
+        opacity: 1;
+         transform: translateY(0);
+     } 
+    }
+  
+  .body-title2 {
+    color: #000;
+    padding-left: 7vw;
+    font-size: 5vw;
+    text-decoration:none; 
+    opacity:0;
+    animation-name:anime2;
+     animation-duration:0.5s; 
+     animation-delay: 1.2s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+   }
+   @keyframes anime2 {
+     0% {
+      opacity: 0;
+      transform: translateY(30px);
+     }
+       100%{
+         opacity: 1;
+          transform: translateY(0);
+      } 
+     }
+  
+  .left-body-image{
+   height: 30vh;
+   width: 50vw;
+   padding-top: 5vh;
+   opacity:0;
+   animation-name:anime3;
+   animation-duration:0.5s; 
+   animation-delay: 1.4s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+  }
+   @keyframes anime3 {
+    0% {
+    opacity: 0;
+    transform: translateY(30px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+   
+  .light-body{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .light-image-top{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    margin-bottom: 3vh;
+  }
+  .hukidasi-image{
+    height: 25vh;
+    width: 40vw;
+    opacity:0;
+    animation-name:anime5;
+    animation-duration:0.5s; 
+    animation-delay: 2.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime5 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+  /*吹き出しの中*/
+  .light-image-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .anime-image{
+    height: 4vh;
+    width: 6vw;
+    padding: 5vh 0 0 13vw;
+    opacity:0;
+    animation-name:anime7;
+    animation-duration:0.5s; 
+    animation-delay: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime7 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+    .light-image-bottom2{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image2{
+      height: 4vh;
+    width: 6vw;
+      padding: 13vh 0 0 17vw;
+      opacity:0;
+      animation-name:anime6;
+      animation-duration:0.5s; 
+      animation-delay: 2.4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime6 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom3{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image3{
+      height: 4vh;
+    width: 6vw;
+      padding: 5vh 0 0 21vw;
+    opacity:0;
+    animation-name:anime8;
+    animation-duration:0.5s; 
+    animation-delay: 2.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime6 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+    .light-image-bottom4{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image4{
+      height: 4vh;
+      width: 6vw;
+      padding: 15vh 0 0 24vw;
+      opacity:0;
+      animation-name:anime8;
+      animation-duration:0.5s; 
+      animation-delay: 2.7s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime8 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom5{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image5{
+      height: 4vh;
+      width: 6vw;
+      padding: 23vh 0 0 18vw;
+      opacity:0;
+      animation-name:anime9;
+      animation-duration:0.5s; 
+      animation-delay: 2.8s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime9 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom6{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image6{
+      height: 4vh;
+    width: 6vw;
+      padding: 18vh 0 0 12vw;
+      opacity:0;
+      animation-name:anime10;
+      animation-duration:0.5s; 
+      animation-delay: 2.9s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime10 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom7{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image7{
+      height: 4vh;
+      width: 6vw;
+      padding: 10vh 0 0 9vw;
+      opacity:0;
+      animation-name:anime11;
+      animation-duration:0.5s; 
+      animation-delay: 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime11 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  .netosa-image{
+    height: 4vh;
+    width: 6vw;
+    opacity:0;
+    animation-name:anime4;
+    animation-duration:0.5s; 
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime4 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+  
+  .body-lists{
+    padding: 2vh 3vw;
+    margin: 0 5vw 0 0;
+    border:1px solid;
+    border-width:thick; 
+    border-radius: 10px;
+    border-color: #000;
+    text-align: center;
+    opacity:0;
+    animation-name:anime12;
+    animation-duration:0.5s; 
+    animation-delay: 3.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .let-start{
+    font-size: 3vw;
+  }
+   @keyframes anime12 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+  .new-buttons{
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    margin-top: 5vh;
+  }
+  
+  
+  
+  .new-link {
+    color: #FFF;
+    background-color: #000;
+   font-size: 2vw;
+   text-decoration:none; 
+   padding: 2vh 3vw 2vh 3vw;
+   margin-left: 1vw;
+   border-radius: 10px;
+  }
 }
-.content-edit{
-  text-decoration: none;
-  color: #000;
+
+//スマホ表示
+
+@media (max-width: 599px) {
+  body{
+    width: 100vw;
+    font-family: "Helvetica Neue",
+      Arial,
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      Meiryo,
+      sans-serif;
+  }
+  
+  .wrap {
+    overflow: hidden;
+    position: relative;
+  /*ヘッダーの位置調整*/
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 15vh;
+    box-sizing: border-box;
+  }
+  
+  /*ログイン済*/
+  .content-sort th{
+    color: #000;
+   text-decoration:none; 
+  
+  }
+  
+  .login-main-body{
+    width: 100vw;
+    height: 70%;
+  }
+  .login-contents{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .sabusuku-title{
+    width: 100vw;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;  
+    margin-bottom: 2vh;
+  }
+  
+  .sabusuku-title-name{
+    margin-left: 15vw;
+    font-size: 40px;
+  }
+  
+  .content-new{
+    color: #FFF;
+    background-color: #000;
+   font-size: 2vh;
+   text-decoration:none; 
+   padding: 2vh ;
+   margin-right: 20vw;
+   border-radius: 10px;
+  }
+  .content-sort{
+    width: 25%;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content:space-between;
+    align-items: center;  
+  }
+  .sort-title{
+    color: #000;
+   font-size: 2vh;
+   text-decoration:none; 
+   border-bottom:1px solid;
+   border-color: #000;
+  
+  }
+  .sort-list{
+    margin: 3vh 0 1vh 0;
+  }
+  a.sorter {
+    color: #FFF;
+    background-color: #000;
+   font-size: 1vh;
+   text-decoration:none; 
+   padding: 1vh ;
+   border-radius: 10px;
+  }
+  /*コンテンツ一覧表示*/
+  .sabusuku-titlename{
+  
+  }
+  
+  .content-title{
+    width: 100%;
+    padding: 2vh 0 0 2vh;
+  }
+  .all-list{
+    width: 30vw;
+    height: 20vh;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content:space-between;
+    border:1px solid;
+    border-radius: 10px;
+    border-color: #000;
+  }
+  
+  
+  .content-img{
+    width:14vw;
+    height:11vh;
+    object-fit:cover;
+    border-radius:50%;
+    margin: 5vh 1vw 0 0;
+    
+  }
+  .content-name{
+    font-size: 1vw;
+  }
+  .content-price{
+    font-weight: 900; 
+    font-size: 3vw;
+  }
+  .content-edit{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /*未ログイン*/
+  .main-body{
+    width: 100vw;
+    display: flex;
+  }
+  .left-body{
+    width: 50%;
+  
+  }
+  .left-body-box{
+    font-weight: bolder; 
+    padding-top: 5vh;
+  }
+  
+  .body-title {
+    color: #000;
+   font-size: 5vw;
+   text-decoration:none; 
+   padding-left: 7vw;
+  
+   opacity:0;
+    animation-name:anime1;
+    animation-duration:0.5s; 
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes anime1 {
+    0% {
+     opacity: 0;
+     transform: translateY(30px);
+    }
+      100%{
+        opacity: 1;
+         transform: translateY(0);
+     } 
+    }
+  
+  .body-title2 {
+    color: #000;
+    padding-left: 7vw;
+    font-size: 5vw;
+    text-decoration:none; 
+    opacity:0;
+    animation-name:anime2;
+     animation-duration:0.5s; 
+     animation-delay: 1.2s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+   }
+   @keyframes anime2 {
+     0% {
+      opacity: 0;
+      transform: translateY(30px);
+     }
+       100%{
+         opacity: 1;
+          transform: translateY(0);
+      } 
+     }
+  
+  .left-body-image{
+   height: 30vh;
+   width: 50vw;
+   padding-top: 5vh;
+   opacity:0;
+   animation-name:anime3;
+   animation-duration:0.5s; 
+   animation-delay: 1.4s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+  }
+   @keyframes anime3 {
+    0% {
+    opacity: 0;
+    transform: translateY(30px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+   
+  .light-body{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .light-image-top{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    margin-bottom: 3vh;
+  }
+  .hukidasi-image{
+    height: 25vh;
+    width: 40vw;
+    opacity:0;
+    animation-name:anime5;
+    animation-duration:0.5s; 
+    animation-delay: 2.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime5 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+  /*吹き出しの中*/
+  .light-image-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .anime-image{
+    height: 4vh;
+    width: 6vw;
+    padding: 5vh 0 0 13vw;
+    opacity:0;
+    animation-name:anime7;
+    animation-duration:0.5s; 
+    animation-delay: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime7 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+    .light-image-bottom2{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image2{
+      height: 4vh;
+    width: 6vw;
+      padding: 13vh 0 0 17vw;
+      opacity:0;
+      animation-name:anime6;
+      animation-duration:0.5s; 
+      animation-delay: 2.4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime6 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom3{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image3{
+      height: 4vh;
+    width: 6vw;
+      padding: 5vh 0 0 21vw;
+    opacity:0;
+    animation-name:anime8;
+    animation-duration:0.5s; 
+    animation-delay: 2.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime6 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+    .light-image-bottom4{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image4{
+      height: 4vh;
+      width: 6vw;
+      padding: 15vh 0 0 24vw;
+      opacity:0;
+      animation-name:anime8;
+      animation-duration:0.5s; 
+      animation-delay: 2.7s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime8 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom5{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image5{
+      height: 4vh;
+      width: 6vw;
+      padding: 23vh 0 0 18vw;
+      opacity:0;
+      animation-name:anime9;
+      animation-duration:0.5s; 
+      animation-delay: 2.8s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime9 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom6{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image6{
+      height: 4vh;
+    width: 6vw;
+      padding: 18vh 0 0 12vw;
+      opacity:0;
+      animation-name:anime10;
+      animation-duration:0.5s; 
+      animation-delay: 2.9s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime10 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  
+    .light-image-bottom7{
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    .anime-image7{
+      height: 4vh;
+      width: 6vw;
+      padding: 10vh 0 0 9vw;
+      opacity:0;
+      animation-name:anime11;
+      animation-duration:0.5s; 
+      animation-delay: 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+     @keyframes anime11 {
+      0% {
+      opacity: 0;
+      transform: translateY(0px);
+      }
+      100%{
+       opacity: 1;
+       transform: translateY(0);
+      } 
+      }
+  .netosa-image{
+    height: 4vh;
+    width: 6vw;
+    opacity:0;
+    animation-name:anime4;
+    animation-duration:0.5s; 
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+   @keyframes anime4 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+  
+  .body-lists{
+    padding: 2vh 3vw;
+    margin: 0 5vw 0 0;
+    border:1px solid;
+    border-width:thick; 
+    border-radius: 10px;
+    border-color: #000;
+    text-align: center;
+    opacity:0;
+    animation-name:anime12;
+    animation-duration:0.5s; 
+    animation-delay: 3.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .let-start{
+    font-size: 3vw;
+  }
+   @keyframes anime12 {
+    0% {
+    opacity: 0;
+    transform: translateY(0px);
+    }
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    } 
+    }
+  
+  .new-buttons{
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    margin-top: 5vh;
+  }
+  
+  
+  
+  .new-link {
+    color: #FFF;
+    background-color: #000;
+   font-size: 2vw;
+   text-decoration:none; 
+   padding: 2vh 3vw 2vh 3vw;
+   margin-left: 1vw;
+   border-radius: 10px;
+  }
 }

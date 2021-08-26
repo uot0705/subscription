@@ -2,12 +2,34 @@
   <div class='title-contents'>
      <%= link_to image_tag("Sabusukulogo.png", class:"title-contents-image") , "/" %>
   </div>
+
   <div class='header-user'>
    <% if user_signed_in? %>
-   <p><%= link_to "こんにちは,#{current_user.nickname}さん", edit_user_registration_path , class:"header-nickname" %></p>
-   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <p class = "header-nickname">こんばんは、ゲストさん</p>
-  <% end %>
+
+  <div class="user-title">
+   <p class="header-aisatu">こんにちは、</p>
+   <p class="header-nickname"><%= "#{current_user.nickname}"  %></p>
+   <p class="header-sisatu">さん</p>
+   </div>
+
+   <div class="user-menu">
+  <%= link_to '編集', edit_user_registration_path, class:"user-menu-li" %>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:"user-menu-li"%>
   </div>
+
+  <% else %>
+    <p class = "header-nickname-m">こんばんは、ゲストさん</p>
+  <% end %>
+
+
+
+  </div>
+    <script>
+$(function(){
+  $('.user-menu').hide();
+  $('.header-nickname').on('click', () => {
+    $('.user-menu').toggle();
+    });
+});
+</script>
 </header>
