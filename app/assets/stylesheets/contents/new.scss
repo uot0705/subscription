@@ -54,7 +54,7 @@
   line-height: 150%;
   }
 }
-@media (max-width: 1024px) {
+@media  (min-width: 599px) and (max-width: 1024px) {
   .content-form{
     display: flex;
     flex-direction: column; 
@@ -125,8 +125,10 @@
     align-items: center; 
   }
   
+  
   .card{
     height: auto;
+    margin-top: 5vh;
     overflow: hidden;
       border-radius: 8px;
       border-left: solid 1px #ddd;
@@ -154,7 +156,7 @@
     
     }
     .card__titletext{
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
     line-height: 125%;
     margin-top: 10px;
@@ -164,4 +166,5 @@
     font-size: 12px;
     line-height: 150%;
     }
+    
 }

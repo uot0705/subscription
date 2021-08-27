@@ -28,6 +28,11 @@ body {
   justify-content: center; 
   align-items: center; 
  }
+ .form-box-c{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
 .newicon-image{
   height: 5vh;
 
@@ -45,7 +50,7 @@ body {
 }
 .submit-botan{
   background-color: #fff;
-padding: 2vh;
+padding: 1vh 2vw;
   border-width:thick; 
   border-radius: 10px;
   border-color: #000;
@@ -191,7 +196,7 @@ padding: 2vh;
   border-width:thick; 
   border-radius: 10px;
   margin: 10vh 0 0 0;
-  padding: 1vh 2vw;
+  padding: 1vh;
 }
 
 .user-delete-botan{
@@ -204,7 +209,7 @@ padding: 2vh;
 }
 
 
-@media (max-width: 1024px) {
+@media (min-width: 599px) and (max-width: 1024px) {
   html {
     height: 100vh;
   }
@@ -234,6 +239,11 @@ padding: 2vh;
     justify-content: center; 
     align-items: center; 
    }
+   .form-box-c{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
   .newicon-image{
     height: 5vh;
   
@@ -420,20 +430,29 @@ padding: 2vh;
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-  
   }
   
   .views-title{
     color: #000;
     font-weight: bolder; 
-    font-size: 40px;
+    font-size: 7vw;
     text-align: center;
   }
   
+  .new_user{
+    margin-top: 5vh;
+  }
   .form-box{
     display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    
+   }
+   .form-box-c{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 68%;
    }
   .newicon-image{
     height: 5vh;
@@ -445,7 +464,7 @@ padding: 2vh;
   }
   .input-default{
     width: 50vw;
-    height: 3vw;
+    height: 5vw;
     border-width:thick; 
     border-radius: 10px;
     border-color: #000;
@@ -458,7 +477,9 @@ padding: 2vh;
     border-color: #000;
     font-weight: bolder; 
   }
-  
+  .form-text-c{
+    font-size: 4vw;
+  }
   /*入力確認*/
   .confirm{
    

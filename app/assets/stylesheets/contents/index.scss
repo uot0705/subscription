@@ -104,6 +104,13 @@ a.sorter {
   border:1px solid;
   border-radius: 10px;
   border-color: #000;
+  position: relative;
+}
+
+.image-absolute{
+position:  absolute;  
+top: 3vh;
+left: 9vw;
 }
 
 
@@ -262,7 +269,7 @@ a.sorter {
 .anime-image{
   height: 8vh;
   width: 3vw;
-  padding: 5vh 0 0 13vw;
+  padding: 5vh 0 0 14vw;
   opacity:0;
   animation-name:anime7;
   animation-duration:0.5s; 
@@ -289,7 +296,7 @@ a.sorter {
   .anime-image2{
     height: 8vh;
     width: 3vw;
-    padding: 13vh 0 0 17vw;
+    padding: 13vh 0 0 18vw;
     opacity:0;
     animation-name:anime6;
     animation-duration:0.5s; 
@@ -316,7 +323,7 @@ a.sorter {
   .anime-image3{
     height: 8vh;
     width: 3vw;
-    padding: 5vh 0 0 21vw;
+    padding: 5vh 0 0 22vw;
   opacity:0;
   animation-name:anime8;
   animation-duration:0.5s; 
@@ -343,7 +350,7 @@ a.sorter {
   .anime-image4{
     height: 8vh;
     width: 3vw;
-    padding: 15vh 0 0 24vw;
+    padding: 15vh 0 0 25vw;
     opacity:0;
     animation-name:anime8;
     animation-duration:0.5s; 
@@ -370,7 +377,7 @@ a.sorter {
   .anime-image5{
     height: 8vh;
     width: 3vw;
-    padding: 23vh 0 0 18vw;
+    padding: 23vh 0 0 19vw;
     opacity:0;
     animation-name:anime9;
     animation-duration:0.5s; 
@@ -397,7 +404,7 @@ a.sorter {
   .anime-image6{
     height: 8vh;
     width: 3vw;
-    padding: 18vh 0 0 12vw;
+    padding: 18vh 0 0 13vw;
     opacity:0;
     animation-name:anime10;
     animation-duration:0.5s; 
@@ -424,7 +431,7 @@ a.sorter {
   .anime-image7{
     height: 8vh;
     width: 3vw;
-    padding: 10vh 0 0 9vw;
+    padding: 10vh 0 0 10vw;
     opacity:0;
     animation-name:anime11;
     animation-duration:0.5s; 
@@ -518,7 +525,7 @@ a.sorter {
 
 //タブレット表示
 
-@media (max-width: 1024px) {
+@media (min-width: 599px) and (max-width: 1024px) {
   body{
     width: 100vw;
     font-family: "Helvetica Neue",
@@ -624,6 +631,13 @@ a.sorter {
     border:1px solid;
     border-radius: 10px;
     border-color: #000;
+    position: relative;
+  }
+  
+  .image-absolute{
+  position:  absolute;  
+  top: 2vh;
+  left: 13vw;
   }
   
   
@@ -746,8 +760,8 @@ a.sorter {
     margin-bottom: 3vh;
   }
   .hukidasi-image{
-    height: 25vh;
-    width: 40vw;
+    height: 30vh;
+    width: 42vw;
     opacity:0;
     animation-name:anime5;
     animation-duration:0.5s; 
@@ -775,7 +789,7 @@ a.sorter {
   .anime-image{
     height: 4vh;
     width: 6vw;
-    padding: 5vh 0 0 13vw;
+    padding: 5vh 0 0 17vw;
     opacity:0;
     animation-name:anime7;
     animation-duration:0.5s; 
@@ -802,7 +816,7 @@ a.sorter {
     .anime-image2{
       height: 4vh;
     width: 6vw;
-      padding: 13vh 0 0 17vw;
+      padding: 10vh 0 0 22vw;
       opacity:0;
       animation-name:anime6;
       animation-duration:0.5s; 
@@ -829,7 +843,7 @@ a.sorter {
     .anime-image3{
       height: 4vh;
     width: 6vw;
-      padding: 5vh 0 0 21vw;
+      padding: 5vh 0 0 30vw;
     opacity:0;
     animation-name:anime8;
     animation-duration:0.5s; 
@@ -856,7 +870,7 @@ a.sorter {
     .anime-image4{
       height: 4vh;
       width: 6vw;
-      padding: 15vh 0 0 24vw;
+      padding: 16vh 0 0 26vw;
       opacity:0;
       animation-name:anime8;
       animation-duration:0.5s; 
@@ -883,7 +897,7 @@ a.sorter {
     .anime-image5{
       height: 4vh;
       width: 6vw;
-      padding: 23vh 0 0 18vw;
+      padding: 10vh 0 0 32vw;
       opacity:0;
       animation-name:anime9;
       animation-duration:0.5s; 
@@ -910,7 +924,7 @@ a.sorter {
     .anime-image6{
       height: 4vh;
     width: 6vw;
-      padding: 18vh 0 0 12vw;
+      padding: 15vh 0 0 15vw;
       opacity:0;
       animation-name:anime10;
       animation-duration:0.5s; 
@@ -937,7 +951,7 @@ a.sorter {
     .anime-image7{
       height: 4vh;
       width: 6vw;
-      padding: 10vh 0 0 9vw;
+      padding: 10vh 0 0 10vw;
       opacity:0;
       animation-name:anime11;
       animation-duration:0.5s; 
@@ -1070,27 +1084,26 @@ a.sorter {
   .sabusuku-title{
     width: 100vw;
     display: flex;
-    justify-content:space-between;
-    align-items: center;  
-    margin-bottom: 2vh;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 4vw;
   }
   
   .sabusuku-title-name{
-    margin-left: 15vw;
-    font-size: 40px;
+    font-size: 10vw;
+    margin-bottom: 3vh;
   }
   
   .content-new{
     color: #FFF;
     background-color: #000;
-   font-size: 2vh;
+   font-size: 3vw;
    text-decoration:none; 
-   padding: 2vh ;
-   margin-right: 20vw;
    border-radius: 10px;
+   padding: 2vh ;
   }
   .content-sort{
-    width: 25%;
     margin-bottom: 2vh;
     display: flex;
     flex-direction: column; 
@@ -1107,6 +1120,8 @@ a.sorter {
   }
   .sort-list{
     margin: 3vh 0 1vh 0;
+    display: flex;
+    
   }
   a.sorter {
     color: #FFF;
@@ -1115,18 +1130,16 @@ a.sorter {
    text-decoration:none; 
    padding: 1vh ;
    border-radius: 10px;
+   margin-right: 1vw;
   }
   /*コンテンツ一覧表示*/
-  .sabusuku-titlename{
-  
-  }
   
   .content-title{
     width: 100%;
     padding: 2vh 0 0 2vh;
   }
   .all-list{
-    width: 30vw;
+    width: 50vw;
     height: 20vh;
     margin-bottom: 1vh;
     display: flex;
@@ -1134,23 +1147,29 @@ a.sorter {
     border:1px solid;
     border-radius: 10px;
     border-color: #000;
+    position: relative;
   }
   
+ .image-absolute{
+  position:  absolute;  
+  top: 7vh;
+  left: 28vw;
+ }
   
   .content-img{
-    width:14vw;
-    height:11vh;
+    width:18vw;
+    height:10vh;
     object-fit:cover;
     border-radius:50%;
-    margin: 5vh 1vw 0 0;
-    
+  
   }
   .content-name{
+    width: 100%;
     font-size: 1vw;
   }
   .content-price{
     font-weight: 900; 
-    font-size: 3vw;
+    font-size: 5vw;
   }
   .content-edit{
     text-decoration: none;
@@ -1160,20 +1179,19 @@ a.sorter {
   /*未ログイン*/
   .main-body{
     width: 100vw;
-    display: flex;
+   
   }
   .left-body{
-    width: 50%;
-  
+    display: flex;
   }
   .left-body-box{
     font-weight: bolder; 
-    padding-top: 5vh;
+    margin:0 auto;
   }
   
   .body-title {
     color: #000;
-   font-size: 5vw;
+   font-size: 8vw;
    text-decoration:none; 
    padding-left: 7vw;
   
@@ -1198,7 +1216,7 @@ a.sorter {
   .body-title2 {
     color: #000;
     padding-left: 7vw;
-    font-size: 5vw;
+    font-size: 8vw;
     text-decoration:none; 
     opacity:0;
     animation-name:anime2;
@@ -1219,32 +1237,12 @@ a.sorter {
      }
   
   .left-body-image{
-   height: 30vh;
-   width: 50vw;
-   padding-top: 5vh;
-   opacity:0;
-   animation-name:anime3;
-   animation-duration:0.5s; 
-   animation-delay: 1.4s;
-   animation-iteration-count: 1;
-   animation-fill-mode: forwards;
-  }
-   @keyframes anime3 {
-    0% {
-    opacity: 0;
-    transform: translateY(30px);
-    }
-    100%{
-     opacity: 1;
-     transform: translateY(0);
-    } 
+   display: none;
     }
   
    
   .light-body{
-    width: 50%;
-    display: flex;
-    flex-direction: column; 
+   
   }
   
   .light-image-top{
@@ -1257,7 +1255,7 @@ a.sorter {
   }
   .hukidasi-image{
     height: 25vh;
-    width: 40vw;
+    width: 60vw;
     opacity:0;
     animation-name:anime5;
     animation-duration:0.5s; 
@@ -1285,7 +1283,7 @@ a.sorter {
   .anime-image{
     height: 4vh;
     width: 6vw;
-    padding: 5vh 0 0 13vw;
+    padding: 5vh 0 0 37vw;
     opacity:0;
     animation-name:anime7;
     animation-duration:0.5s; 
@@ -1312,7 +1310,7 @@ a.sorter {
     .anime-image2{
       height: 4vh;
     width: 6vw;
-      padding: 13vh 0 0 17vw;
+      padding: 9vh 0 0 47vw;
       opacity:0;
       animation-name:anime6;
       animation-duration:0.5s; 
@@ -1339,7 +1337,7 @@ a.sorter {
     .anime-image3{
       height: 4vh;
     width: 6vw;
-      padding: 5vh 0 0 21vw;
+      padding: 5vh 0 0 58vw;
     opacity:0;
     animation-name:anime8;
     animation-duration:0.5s; 
@@ -1366,7 +1364,7 @@ a.sorter {
     .anime-image4{
       height: 4vh;
       width: 6vw;
-      padding: 15vh 0 0 24vw;
+      padding: 10vh 0 0 62vw;
       opacity:0;
       animation-name:anime8;
       animation-duration:0.5s; 
@@ -1393,7 +1391,7 @@ a.sorter {
     .anime-image5{
       height: 4vh;
       width: 6vw;
-      padding: 23vh 0 0 18vw;
+      padding: 15vh 0 0 49vw;
       opacity:0;
       animation-name:anime9;
       animation-duration:0.5s; 
@@ -1420,7 +1418,7 @@ a.sorter {
     .anime-image6{
       height: 4vh;
     width: 6vw;
-      padding: 18vh 0 0 12vw;
+      padding: 12vh 0 0 35vw;
       opacity:0;
       animation-name:anime10;
       animation-duration:0.5s; 
@@ -1447,7 +1445,7 @@ a.sorter {
     .anime-image7{
       height: 4vh;
       width: 6vw;
-      padding: 10vh 0 0 9vw;
+      padding: 9vh 0 0 26vw;
       opacity:0;
       animation-name:anime11;
       animation-duration:0.5s; 
@@ -1489,7 +1487,8 @@ a.sorter {
   
   .body-lists{
     padding: 2vh 3vw;
-    margin: 0 5vw 0 0;
+    margin:0 auto;
+    width: 70%;
     border:1px solid;
     border-width:thick; 
     border-radius: 10px;
@@ -1503,7 +1502,7 @@ a.sorter {
     animation-fill-mode: forwards;
   }
   .let-start{
-    font-size: 3vw;
+    font-size: 5vw;
   }
    @keyframes anime12 {
     0% {
@@ -1520,7 +1519,7 @@ a.sorter {
     display: flex;
     justify-content:center;
     align-items: center; 
-    margin-top: 5vh;
+    margin: 5vh 0 3vh 0;
   }
   
   
@@ -1528,10 +1527,10 @@ a.sorter {
   .new-link {
     color: #FFF;
     background-color: #000;
-   font-size: 2vw;
+   font-size: 3vw;
    text-decoration:none; 
    padding: 2vh 3vw 2vh 3vw;
-   margin-left: 1vw;
+   margin: 0 2vw;
    border-radius: 10px;
   }
 }
