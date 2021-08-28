@@ -5,11 +5,9 @@ RSpec.describe User, type: :model do
     @user = FactoryBot.build(:user)
   end
 
-
   describe 'ユーザー新規登録' do
-
     context '新規登録できるとき' do
-    it '全ての項目の入力が存在すれば登録できること' do
+      it '全ての項目の入力が存在すれば登録できること' do
         expect(@user).to be_valid
       end
     end
@@ -24,7 +22,7 @@ RSpec.describe User, type: :model do
       it 'nicknameが40文字以上では登録できない' do
         @user.nickname = 'あああああああああ、あああああああああ、あああああああああ、あああああああああ、あ'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Nickname is too long (maximum is 40 characters)"
+        expect(@user.errors.full_messages).to include 'Nickname is too long (maximum is 40 characters)'
       end
       # email
       it 'emailが空では登録できない' do
@@ -58,17 +56,17 @@ RSpec.describe User, type: :model do
       it 'passwordは半角英数字混合でないと登録できない' do
         @user.password = 'aaaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Password is invalid"
+        expect(@user.errors.full_messages).to include 'Password is invalid'
       end
       it 'passwordは半角英数字混合でないと登録できない' do
         @user.password = '000000'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Password is invalid"
+        expect(@user.errors.full_messages).to include 'Password is invalid'
       end
       it 'passwordは全角の場合は登録できない' do
         @user.password = 'AAAAAA'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Password is invalid"
+        expect(@user.errors.full_messages).to include 'Password is invalid'
       end
       # check
       it 'checkが空では登録できない' do
@@ -78,5 +76,4 @@ RSpec.describe User, type: :model do
       end
     end
   end
-
 end

@@ -1,5 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe "ThanxMailers", type: :request do
-
+RSpec.describe 'ThanxMailers', type: :request do
 end

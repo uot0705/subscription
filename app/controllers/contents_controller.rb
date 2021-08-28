@@ -1,7 +1,6 @@
 class ContentsController < ApplicationController
-
-  before_action :find_action ,only: [:edit, :update, :destroy]
-  before_action :move_to_index ,only: [:edit, :update, :destroy]
+  before_action :find_action, only: [:edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
   helper_method :sort_column, :sort_direction
 
   def index
@@ -19,26 +18,26 @@ class ContentsController < ApplicationController
     else
       render :new
     end
-end
-
-def edit
-
-end
-
-def update
-  if @content.update(content_params)
-    redirect_to root_path
-  else
-    render :edit
   end
-end
 
-def destroy
-  @content.destroy
-  redirect_to root_path
-end
+  def edit
+  end
 
-private
+  def update
+    if @content.update(content_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @content.destroy
+    redirect_to root_path
+  end
+
+  private
+
   def content_params
     params.require(:content).permit(:name, :price, :image).merge(user_id: current_user.id)
   end
@@ -48,17 +47,14 @@ private
   end
 
   def move_to_index
-    unless current_user == @content.user
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user == @content.user
   end
-  
+
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
-   end
-   
-   def sort_column
-    Content.column_names.include?(params[:sort]) ? params[:sort] : 'id'
-   end
+  end
 
+  def sort_column
+    Content.column_names.include?(params[:sort]) ? params[:sort] : 'id'
+  end
 end
