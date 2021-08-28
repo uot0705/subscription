@@ -755,11 +755,11 @@ left: 9vw;
     justify-content: center; 
     align-items: center; 
     position: relative;
-    margin-bottom: 3vh;
+    margin:0  3vh 3vh 0;
   }
   .hukidasi-image{
-    height: 30vh;
-    width: 42vw;
+    height: 31vh;
+    width: 45vw;
     opacity:0;
     animation-name:anime5;
     animation-duration:0.5s; 
@@ -787,7 +787,7 @@ left: 9vw;
   .anime-image{
     height: 4vh;
     width: 6vw;
-    padding: 5vh 0 0 17vw;
+    padding: 5vh 0 0 15vw;
     opacity:0;
     animation-name:anime7;
     animation-duration:0.5s; 
@@ -814,7 +814,7 @@ left: 9vw;
     .anime-image2{
       height: 4vh;
     width: 6vw;
-      padding: 10vh 0 0 22vw;
+      padding: 11vh 0 0 21vw;
       opacity:0;
       animation-name:anime6;
       animation-duration:0.5s; 
@@ -922,7 +922,7 @@ left: 9vw;
     .anime-image6{
       height: 4vh;
     width: 6vw;
-      padding: 15vh 0 0 15vw;
+      padding: 15vh 0 0 13vw;
       opacity:0;
       animation-name:anime10;
       animation-duration:0.5s; 
@@ -949,7 +949,7 @@ left: 9vw;
     .anime-image7{
       height: 4vh;
       width: 6vw;
-      padding: 10vh 0 0 10vw;
+      padding: 10vh 0 0 8vw;
       opacity:0;
       animation-name:anime11;
       animation-duration:0.5s; 
