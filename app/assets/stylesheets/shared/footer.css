@@ -119,7 +119,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 14%;
+    height: 17%;
     
   }
   .footer-price{
@@ -128,7 +128,7 @@
     align-items: center; 
     margin:0 auto;
     padding: 0 3vw 2vh 3vw;
-    width: 50%;
+    width: 70%;
     height: 90%;
     border-radius: 10px;
     border-color: #000;
@@ -148,7 +148,7 @@
   .footer-light{
     margin-right: 5vw;
     font-weight: bold; 
-    font-size: 4vw;
+    font-size: 5vw;
     display: flex;
   }
 
@@ -236,7 +236,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 14%;
+    height: 20%;
     
   }
   .footer-price{
@@ -245,8 +245,8 @@
     align-items: center; 
     margin:0 auto;
     padding: 0 3vw 2vh 3vw;
-    width: 50%;
-    height: 90%;
+    width: 70%;
+    height: 100%;
     border-radius: 10px;
     border-color: #000;
     background:#F0F0F0;
@@ -255,17 +255,17 @@
     margin-left: 5vw;
   }
   .footer-left-m{
-    font-size: 2vw;
+    font-size: 3vw;
   }
   
   .footer-left-a{
     font-weight: bold; 
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .footer-light{
     margin-right: 5vw;
     font-weight: bold; 
-    font-size: 4vw;
+    font-size: 6vw;
     display: flex;
   }
 
