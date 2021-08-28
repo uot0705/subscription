@@ -16,42 +16,37 @@ RSpec.describe Content, type: :model do
       it 'nameが空では登録できない' do
         @content.name = ''
         @content.valid?
-        expect(@content.errors.full_messages).to include "Name can't be blank"
+        expect(@content.errors.full_messages).to include 'TITLEを入力してください'
       end
       it 'nicknameが20文字以上では登録できない' do
         @content.name = 'あああああああああ、あああああああああ、あ'
         @content.valid?
-        expect(@content.errors.full_messages).to include 'Name is too long (maximum is 20 characters)'
+        expect(@content.errors.full_messages).to include 'TITLEは20文字以内で入力してください'
       end
       it '価格が空では登録できない' do
         @content.price = ''
         @content.valid?
-        expect(@content.errors.full_messages).to include "Price can't be blank"
+        expect(@content.errors.full_messages).to include '金額を入力してください'
       end
       it '価格が¥0では登録できない' do
         @content.price = 0
         @content.valid?
-        expect(@content.errors.full_messages).to include 'Price must be greater than 0'
+        expect(@content.errors.full_messages).to include '金額は0より大きい値にしてください'
       end
       it '価格が¥999,999以上では登録できない' do
         @content.price = 10_000_000
         @content.valid?
-        expect(@content.errors.full_messages).to include 'Price must be less than 1000000'
+        expect(@content.errors.full_messages).to include '金額は1000000より小さい値にしてください'
       end
       it '価格は全角数字では登録できない' do
         @content.price = '１０００'
         @content.valid?
-        expect(@content.errors.full_messages).to include 'Price is not a number'
+        expect(@content.errors.full_messages).to include '金額は数値で入力してください'
       end
-      it '価格は半角英数混合では登録できないこと' do
-        @content.price = '1234abcd'
-        @content.valid?
-        expect(@content.errors.full_messages).to include 'Price is not a number'
-      end
-      it '価格は半角英語だけでは登録できないこと' do
+      it '価格は数字以外では登録できないこと' do
         @content.price = 'aaaa'
         @content.valid?
-        expect(@content.errors.full_messages).to include 'Price is not a number'
+        expect(@content.errors.full_messages).to include '金額は数値で入力してください'
       end
     end
   end

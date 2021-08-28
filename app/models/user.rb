@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, :check, presence: true # 空NG
-  validates :nickname, length: { maximum: 40 }
+  validates :nickname, length: { maximum: 20 }
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, on: :create

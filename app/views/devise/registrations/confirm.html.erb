@@ -5,46 +5,53 @@
   <h2 class ="user-check">入力情報の確認</h2>
 
   <%= form_with model: @user, url: user_registration_path ,local: true do |f| %>
-<div class='confirmform-wrap'>
+  <div class='confirmform-wrap'>
 
-<div class = "chack-box">
- <p>ニックネーム</p>
- <div class="box17">
-    <%= f.text_field :nickname, value: @user.nickname,class:"check-letter", style: "border: none",readonly: true %>
- </div>
-</div>
+    <div class = "chack-box">
+    <div class="box17-name">
+    <p>ニックネーム</p>
+    </div>
+    <div class="box17">
+        <%= f.text_field :nickname, value: @user.nickname,class:"check-letter", style: "border: none",readonly: true %>
+    </div>
+    </div>
 
-<div class = "chack-box">
- <p>email</p>
- <div class="box17">
-  <%= f.text_field :email, value: @user.email,class:"check-letter",style: "border: none",readonly: true %>
- </div>
-</div>
+    <div class = "chack-box">
+    <div class="box17-name">
+    <p>email</p>
+    </div>
+    <div class="box17">
+      <%= f.text_field :email, value: @user.email,class:"check-letter",style: "border: none",readonly: true %>
+    </div>
+    </div>
 
-  
- <div class = "chack-box">
-  <p>password</p>
-  <div class="box17">
-   <%= f.text_field :password, value: @user.password ,class:"check-letter" ,style: "border: none",readonly: true %>
+      
+    <div class = "chack-box">
+      <div class="box17-name">
+      <p>password</p>
+      </div>
+      <div class="box17">
+      <%= f.text_field :password, value: @user.password ,class:"check-letter" ,style: "border: none",readonly: true %>
+      </div>
+    </div>
+      
+    <div class = "chack-box">
+    <div class="box17-name">
+      <p>お知らせ</p>
+      </div>
+      <div class="box17">
+      <%= f.text_field :check, value: @user.check,class:"input-default" ,class:"check-letter" ,style: "border: none",readonly: true %>
+      </div>
+    </div>
+
+    <div class = "confirm.submit">
+    <div class = "submit-box">
+      <%= f.submit "修正する", name: :back , :class=> "submit-botan" %>
+      <%= f.submit "登録する" ,:class=> "submit-botan"%>
+      </div>
+    </div>
+    
   </div>
- </div>
-   
- <div class = "chack-box">
-   <p>お知らせ</p>
-  <div class="box17">
-   <%= f.text_field :check, value: @user.check,class:"input-default" ,class:"check-letter" ,style: "border: none",readonly: true %>
-
-  </div>
- </div>
-
-  <div class = "confirm.submit">
-   <div class = "submit-box">
-    <%= f.submit "修正する", name: :back , :class=> "submit-botan" %>
-    <%= f.submit "登録する" ,:class=> "submit-botan"%>
-     </div>
-  </div>
-  
-</div>
   <% end %>
 </div>
 </body>

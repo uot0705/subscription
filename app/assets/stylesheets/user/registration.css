@@ -75,6 +75,7 @@ padding: 1vh 2vw;
 }
 
 .chack-box{
+  width: 50%;
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -95,7 +96,12 @@ padding: 1vh 2vw;
   text-align: center
  }
  /*入力確認の枠*/
+ .box17-name{
+   width: 20%;
+ }
  .box17{
+  width: 50%;
+  text-align: center;
     margin:2em 0;
     position: relative;
     padding: 0.5em 1.5em;
@@ -286,6 +292,7 @@ padding: 1vh 2vw;
   }
   
   .chack-box{
+    width: 70%;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -303,10 +310,18 @@ padding: 1vh 2vw;
   
    .check-letter{
     font-weight: 900;
+    font-size: 2vw;
     text-align: center
+
    }
    /*入力確認の枠*/
-   .box17{
+   
+   .box17-name{
+   width: 20%;
+  }
+  .box17{
+   width: 60%;
+   text-align: center;
       margin:2em 0;
       position: relative;
       padding: 0.5em 1.5em;
@@ -498,6 +513,7 @@ padding: 1vh 2vw;
   }
   
   .chack-box{
+    width: 80%;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -514,11 +530,17 @@ padding: 1vh 2vw;
    }
   
    .check-letter{
-    font-weight: 900;
-    text-align: center
+    font-weight: 700;
+    text-align: center;
+    font-size: 4vw;
    }
    /*入力確認の枠*/
-   .box17{
+   .box17-name{
+    width: 30%;
+    font-size: 3vw;
+  }
+  .box17{
+   text-align: center;
       margin:2em 0;
       position: relative;
       padding: 0.5em 1.5em;

@@ -65,3 +65,4 @@ gem 'pry-rails'
 gem 'jquery-rails'
 gem 'rails-i18n'
 gem 'whenever', require: false
+gem "aws-sdk-s3", require: false
