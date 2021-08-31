@@ -1,4 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + '/environment')
+require 'active_support/core_ext/time'
 set :path_env, ENV['PATH']
 job_type :runner, "cd :path && PATH=':path_env' bin/rails runner -e :environment ':task' :output"
 job_type :rake,   "cd :path && PATH=':path_env' :environment_variable=:environment bundle exec rake :task --silent :output"
@@ -6,8 +7,13 @@ rails_env = ENV['RAILS_ENV'] || :development
 set :output, "#{Rails.root}/log/cron.log"
 set :environment, rails_env
 
+def local(time)
+  Time.zone = 'Asia/Tokyo'
+  Time.zone.parse(time).localtime($system_utc_offset)
+end
+
 # 毎月1日の9:30に起動(月１)
-every '42 14 31 * *' do
+every local('48 14 31 * *') do
   rake "thanxmailer_a:thanxmailer_a" 
 end
 
