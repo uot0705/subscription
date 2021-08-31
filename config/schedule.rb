@@ -2,9 +2,9 @@ require File.expand_path(File.dirname(__FILE__) + '/environment')
 require 'active_support/core_ext/time'
 set :path_env, ENV['PATH']
 job_type :runner, "cd :path && PATH=':path_env' bin/rails runner -e :environment ':task' :output"
-job_type :rake,   "cd :path && PATH=':path_env' :environment_variable=:environment bundle exec rake :task --silent :output"
+job_type :rake, 'export PATH="$HOME/.rbenv/bin:$PATH"; eval "$(rbenv init -)"; cd :path && RAILS_ENV=:environment bundle exec rake :task :output'
 rails_env = ENV['RAILS_ENV'] || :development
-set :output, "#{Rails.root}/log/cron.log"
+set :output, environment == 'development' ? 'log/crontab.log' : '/deploy/apps/subscription/shared/log/crontab.log'
 set :environment, rails_env
 
 def local(time)
