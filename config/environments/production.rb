@@ -112,7 +112,7 @@ Rails.application.configure do
     :domain => 'smtp.gmail.com',
     :authentication => 'plain',
     :user_name => 'sabusuku.kanri.info@gmail.com',
-    :password => 'xqnqevavcekxjufp'
+    :password => 'shybqfrppsjthakw'
   }
 
 
