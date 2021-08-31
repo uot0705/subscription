@@ -7,13 +7,9 @@ rails_env = ENV['RAILS_ENV'] || :development
 set :output, environment == 'development' ? 'log/crontab.log' : '/deploy/apps/subscription/shared/log/crontab.log'
 set :environment, rails_env
 
-def local(time)
-  Time.zone = 'Asia/Tokyo'
-  Time.zone.parse(time).localtime($system_utc_offset)
-end
 
 # 毎月1日の9:30に起動(月１)
-every local('48 14 31 * *') do
+ every 1.minutes do
   rake "thanxmailer_a:thanxmailer_a" 
 end
 
