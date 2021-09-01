@@ -5,15 +5,19 @@ job_type :rake,   "cd :path && PATH=':path_env' :environment_variable=:environme
 rails_env = ENV['RAILS_ENV'] || :production
 set :output, "#{Rails.root}/log/cron.log"
 set :environment, rails_env
-
+require 'active_support/core_ext/time'
+def jst(time)
+  Time.zone = 'Asia/Tokyo'
+  Time.zone.parse(time).localtime($system_utc_offset)
+end
 
 # 毎月1日の9:30に起動(月１)
-every 1.minutes do
+every jst(1.minutes) do
   rake "thanxmailer_a:thanxmailer_a" 
 end
 
 # 毎月1日の9:30に起動(月２)
-every '00 16 31 * *' do
+every jst('35 10 1 * *') do
   rake "thanxmailer_b:thanxmailer_b" 
 end
 
