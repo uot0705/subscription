@@ -56,7 +56,9 @@
   <div class="actions">
     <%= f.submit "確認画面" , :class=> "submit-botan" %>
   </div>
-
+<%- if controller_name != 'sessions' %>
+  <%= link_to "ログイン画面へ", new_session_path(resource_name),class: "devise-botan2" %><br />
+<% end %>
 </div>
 <% end %>
 

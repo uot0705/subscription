@@ -3,21 +3,25 @@
      <%= link_to image_tag("Sabusukulogo.png", class:"title-contents-image") , "/" %>
   </div>
 
-  <div class='header-user'>
+  
    <% if user_signed_in? %>
-
+<div class='header-user'>
   <div class="user-title">
    <p class="header-nickname"><%= "#{current_user.nickname}"  %></p>
    <p class="header-aisatu">さん</p>
    </div>
 
-   <div class="user-menu">
+<div class="user-menu">
   <%= link_to '編集', edit_user_registration_path, class:"user-menu-li" %>
   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:"user-menu-li"%>
   </div>
-
+ 
+  
+ </div>
   <% else %>
+  <div class='header-user'>
     <p class = "header-nickname-m">こんばんは、ゲストさん</p>
+     </div>
   <% end %>
 
 
