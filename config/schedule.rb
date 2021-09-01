@@ -17,7 +17,7 @@ every jst(1.minutes) do
 end
 
 # 毎月1日の9:30に起動(月２)
-every jst('35 10 1 * *') do
+every jst('40 10 1 * *') do
   rake "thanxmailer_b:thanxmailer_b" 
 end
 
