@@ -12,11 +12,11 @@ every 1.minutes do
 end
 
 # 毎月1日の9:30に起動(月２)
-every '51 11 1 * *' do
+every '58 11 1 * *' do
   rake "thanxmailer_b:thanxmailer_b" 
 end
 
 # 毎月15日の9:30に起動(月２)
-every '53 11 1 * *' do
+every '57 11 1 * *' do
   rake "thanxmailer_c:thanxmailer_c" 
 end
