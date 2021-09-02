@@ -12,8 +12,28 @@
     <pre>
     【契約内容】
      <% @content.each do |content| %>
-     <%= content.name %>:<%= "¥#{content.price}" %>
-    <% end %>
+      <li >
+      <div class='all-list'>
+            <%# タイトル %><%# 金額 %>
+            <div class='content-title'>
+                 <P class='content-name'>
+                 <%= content.name%>
+                 </p>
+                  <p class='content-price'>
+                  <%= "¥#{number_to_currency(content.price)}" %>
+                </p>
+            </div>
+            <%# 画像 %>
+            <div class="image-absolute">
+            <% if content.image.present? %>
+            <%= image_tag content.image, class: "content-img" %>
+            <% else %>
+            <%= image_tag "mitoukou", class: "content-img" %>
+            <% end %>
+            </div>
+       </div>
+       </li>
+       <% end %>
     </pre>
 
     <pre>
