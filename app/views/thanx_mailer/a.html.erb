@@ -9,38 +9,28 @@
     <p>いつも、サブスクの管理をご利用頂きありがとうございます。</p>
     <p><%= "今回の連絡は、現在#{@user.nickname}さんが契約しているサブスク内容のお知らせになります。"%></p>
     
-    <ul class='content-lists'>
+    <pre>
     【契約内容】
      <% @content.each do |content| %>
-      <li >
-      <div class='all-list'>
-            <%# タイトル %><%# 金額 %>
-            <div class='content-title'>
-                 <P class='content-name'>
-                 <%= content.name%>
-                 </p>
-                  <p class='content-price'>
-                  <%= "¥#{number_to_currency(content.price)}" %>
-                </p>
-            </div>
-            <%# 画像 %>
-            <div class="image-absolute">
-            <% if content.image.present? %>
-            <%= image_tag content.image, class: "content-img" %>
-            <% else %>
-            <%= image_tag "mitoukou", class: "content-img" %>
-            <% end %>
-            </div>
-       </div>
-       </li>
-       <% end %>
-      </ul>
+     <%= content.name %>:<%= "¥#{content.price}" %>
+    <% end %>
+    </pre>
 
     <pre>
     <%= "契約数:#{@content.count}" %>
     <%= "合計金額:¥#{@content.sum(:price)}" %>
-   <pre>
-<p> サブスクの管理、下記リンクから解約しましょう。</p>
+   </pre>
+
+    <div class="maill-link">
+        <p>サブスクの管理は、</p>
+      <a href="http://52.68.230.104/">こちら</a>
+      <p>から行いましょう。</p>
+    </div>
+    <div class="maill-link">
+        <p>お知らせ頻度変更の方は、</p>
+      <a href="http://52.68.230.104/users/edit">こちら</a>
+      <p>。</p>
+    </div>
 
 ----------------------------------------------
 Sabusuku no Kanri運営事務局

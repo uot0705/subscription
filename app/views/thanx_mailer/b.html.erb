@@ -19,7 +19,14 @@
     <pre>
     <%= "契約数:#{@content.count}" %>
     <%= "合計金額:¥#{@content.sum(:price)}" %>
-   <pre>
+   </pre>
+
+   <div class="user-title">
+    <p class="header-aisatu">さん</p>
+   <p class="header-nickname"><%= "#{current_user.nickname}"  %></p>
+   <p class="header-aisatu">さん</p>
+   </div>
+
 <p> 契約していないサブスクは、下記リンクから解約しましょう。</p>
 
 ----------------------------------------------
