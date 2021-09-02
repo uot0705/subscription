@@ -141,7 +141,7 @@ a.sorter {
   display: flex;
 }
 .left-body{
-  width: 50vw;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column; 
@@ -152,14 +152,14 @@ a.sorter {
 
 .left-body-box{
   font-weight: bolder; 
-  padding: 0 0 10vw 8vw;
+  padding: 0 0 10vw 0;
 }
 
 .body-title {
   color: #000;
  font-size: 60px;
  text-decoration:none; 
- padding: 0 0 0 5vw;
+ padding: 0 0 0 7vw;
 
  opacity:0;
   animation-name:anime1;
@@ -183,7 +183,7 @@ a.sorter {
   color: #000;
   font-size: 60px;
   text-decoration:none; 
-  padding: 0 0 0 5vw;
+  padding: 0 0 0 7vw;
   opacity:0;
   animation-name:anime2;
    animation-duration:0.5s; 
@@ -473,7 +473,8 @@ a.sorter {
 
 .body-lists{
   padding: 5vh 5vw;
-  margin: 0 10vw 20vh 0;
+  margin: 0 7vw 20vh 0;
+  
   border:1px solid;
   border-width:thick; 
   border-radius: 10px;
