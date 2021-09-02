@@ -12,11 +12,11 @@ every  '30 0 2 * *' do
 end
 
 # 毎月1日の9:30に起動(月２)
-every '31 0 2 * *' do
-  rake "thanxmailer_a:thanxmailer_b" 
+every '40 0 2 * *' do
+  rake "thanxmailer_b:thanxmailer_b" 
 end
 
 # 毎月15日の9:30に起動(月２)
-every '32 0 2 * *' do
-  rake "thanxmailer_a:thanxmailer_c" 
+every '41 0 2 * *' do
+  rake "thanxmailer_c:thanxmailer_c" 
 end
