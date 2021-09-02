@@ -21,17 +21,20 @@
     <%= "合計金額:¥#{@content.sum(:price)}" %>
    </pre>
 
-   <div class="user-title">
-    <p class="header-aisatu">さん</p>
-   <p class="header-nickname"><%= "#{current_user.nickname}"  %></p>
-   <p class="header-aisatu">さん</p>
-   </div>
-
-<p> 契約していないサブスクは、下記リンクから解約しましょう。</p>
+    <div class="maill-link">
+      <p>サブスクの管理は、</p>
+      <a href="http://52.68.230.104/">こちら</a>
+      <p>から行いましょう。</p>
+    </div>
+    <div class="maill-link">
+        <p>お知らせ頻度変更の方は、</p>
+      <a href="http://52.68.230.104/users/edit">こちら</a>
+      <p>。</p>
+    </div>
 
 ----------------------------------------------
 Sabusuku no Kanri運営事務局
-https://subscription-0705.herokuapp.com/
+http://52.68.230.104/
 お問い合わせ先：sabusuku.kanri.info@gmail.com
 ----------------------------------------------
 

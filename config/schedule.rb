@@ -7,16 +7,16 @@ set :output, "#{Rails.root}/log/cron.log"
 set :environment, rails_env
 
 # 毎月1日の9:30に起動(月１)下記時間から
-every  '35 2 2 * *' do
+every  '45 2 2 * *' do
   rake "thanxmailer_a:thanxmailer_a" 
 end
 
 # 毎月1日の9:30に起動(月２)
-every '4 2 2 * *' do
+every '50 2 2 * *' do
   rake "thanxmailer_a:thanxmailer_a" 
 end
 
 # 毎月15日の9:30に起動(月２)
-every '9 2 2 * *' do
+every '55 2 2 * *' do
   rake "thanxmailer_a:thanxmailer_a" 
 end
