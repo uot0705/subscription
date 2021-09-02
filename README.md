@@ -36,12 +36,16 @@ Pass: 7777<br>
 ## トップページ
 [![Image from Gyazo](https://i.gyazo.com/6190b8695139c4a6305881b1bb7462e1.gif)](https://gyazo.com/6190b8695139c4a6305881b1bb7462e1)
 ## ユーザー新規登録
-[![Image from Gyazo](https://i.gyazo.com/21b4ba20ae1ecbe4b84fc6636aa6744b.png)](https://gyazo.com/21b4ba20ae1ecbe4b84fc6636aa6744b)
+[![Image from Gyazo](https://i.gyazo.com/4d8d7dd967f624d68b9371c013e01d91.png)](https://gyazo.com/4d8d7dd967f624d68b9371c013e01d91)
 ## ユーザーページ
 [![Image from Gyazo](https://i.gyazo.com/16add867b4b1f3c8469d8233feb9d335.gif)](https://gyazo.com/16add867b4b1f3c8469d8233feb9d335)
 ## サブスク登録
-[![Image from Gyazo](https://i.gyazo.com/a14fd38ae4b4a2f2ab2cde48eaa4fec5.gif)](https://gyazo.com/a14fd38ae4b4a2f2ab2cde48eaa4fec5)
+[![Image from Gyazo](https://i.gyazo.com/7ef2f0317f6ee608ad2708a6c3469637.gif)](https://gyazo.com/7ef2f0317f6ee608ad2708a6c3469637)
 ## 【メール】新規登録・お知らせ
+□新規登録
+[![Image from Gyazo](https://i.gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0.png)](https://gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0)
+□お知らせ
+[![Image from Gyazo](https://i.gyazo.com/5a0f5726629eff0d524ccfcca095d38e.png)](https://gyazo.com/5a0f5726629eff0d524ccfcca095d38e)
 
 # ◇工夫したポイント
 `①ユーザーが、契約内容を忘れないようにする仕組みを考えた`<br>
