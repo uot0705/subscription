@@ -9,7 +9,7 @@
     <p>いつも、サブスクの管理をご利用頂きありがとうございます。</p>
     <p><%= "今回の連絡は、現在#{@user.nickname}さんが契約しているサブスク内容のお知らせになります。"%></p>
     
-    <pre>
+    <ul class='content-lists'>
     【契約内容】
      <% @content.each do |content| %>
       <li >
@@ -34,17 +34,17 @@
        </div>
        </li>
        <% end %>
-    </pre>
+      </ul>
 
     <pre>
     <%= "契約数:#{@content.count}" %>
     <%= "合計金額:¥#{@content.sum(:price)}" %>
    <pre>
-<p> 契約していないサブスクは、下記リンクから解約しましょう。</p>
+<p> サブスクの管理、下記リンクから解約しましょう。</p>
 
 ----------------------------------------------
 Sabusuku no Kanri運営事務局
-https://subscription-0705.herokuapp.com/
+http://52.68.230.104/
 お問い合わせ先：sabusuku.kanri.info@gmail.com
 ----------------------------------------------
 
