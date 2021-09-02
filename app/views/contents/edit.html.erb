@@ -11,7 +11,7 @@
      <%# 金額 %>
      <div class="card__imgframe">
        <div class="price-content">
-            <p class="content-input-tite">Price</p>
+            <h2>Price(月額)</h2>
           <div>
             <span class="sell-yen">¥</span>
             <%= f.text_field :price,  placeholder:"例）300" %>
@@ -23,14 +23,14 @@
     <%# TITLE %>
     <div class="card__textbox">
       <div class="card__overviewtext">
-       <p class="content-input-tite">Title</p>
+       <h2>Name</h2>
       </div>
       <%= f.text_field :name, class:"card__titletext",  placeholder:"商品名（必須 20文字まで)", maxlength:"40" %>
     </div>
 
     <%# 画像 %>
     <div class="card__textbox">
-       <p class="content-input-tite">Icon Image</p>
+              <h2>Icon Image</h2>
        <div class="card__overviewtext">
        <h2 class = "current-imag" >現在のアイコン</h2>
        <% if @content.image.present? %>
@@ -44,9 +44,12 @@
 
     <%# 下部ボタン %>
      <div class="card__textbox">
-      <%= f.submit "編集" ,class:"sell-btn" %>
-      <p><%= link_to "削除", content_path,method: :delete %></p>
-      <%=link_to '戻る', root_path, class:"back-btn" %>
+      <%= f.submit "編集" ,:class=> "submit-botan" %>
+
+      <div class="display-flex-m-top">
+      <p><%= link_to "削除", content_path,method: :delete ,class: "content-edit-dellet"%></p>
+      <p><%=link_to '戻る', root_path, class: "content-edit-dellet" %></p>
+      <div>
      </div>
     <%# /下部ボタン %>
 

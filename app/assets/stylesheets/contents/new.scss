@@ -1,3 +1,10 @@
+.display-flex{
+  display: flex;
+}
+.display-flex-m-top{
+  display: flex;
+  margin-top: 2vh;
+}
 @media (min-width: 1025px) {
   .content-form{
   display: flex;
@@ -50,8 +57,36 @@
   border-bottom: solid 5px #ccc;
   }
   .card__overviewtext{
-  font-size: 12px;
   line-height: 150%;
+  }
+
+  .content-edit-dellet{
+    border:1px solid #000;
+    border-radius: 10px;
+    padding: 1vh;
+    text-decoration:none; 
+    color: #000;
+    margin-left: 2px;
+  }
+  .content-new-buttn{
+    background-color: #FFF;
+    border:1px solid #000;
+    border-width:thick; 
+    border-radius: 10px;
+    padding: 1vh;
+    text-decoration:none; 
+    color: #000;
+    margin-top: 1vh;
+  }
+
+  .content-new-butt2{
+    background-color: #FFF;
+    border:1px solid #000;
+    border-radius: 10px;
+    padding: 1vh;
+    text-decoration:none; 
+    color: #000;
+    margin-top: 1vh;
   }
 }
 @media  (min-width: 599px) and (max-width: 1024px) {
@@ -105,8 +140,37 @@
     border-bottom: solid 5px #ccc;
     }
     .card__overviewtext{
-    font-size: 12px;
     line-height: 150%;
+    }
+
+    .content-edit-dellet{
+      border:1px solid #000;
+      border-width:thick; 
+      border-radius: 10px;
+      padding: 1vh;
+      text-decoration:none; 
+      color: #000;
+      margin-left: 2px;
+    }
+    .content-new-buttn{
+      background-color: #FFF;
+      border:1px solid #000;
+      border-width:thick; 
+      border-radius: 10px;
+      padding: 1vh;
+      text-decoration:none; 
+      color: #000;
+      margin-top: 1vh;
+    }
+  
+    .content-new-butt2{
+      background-color: #FFF;
+      border:1px solid #000;
+      border-radius: 10px;
+      padding: 1vh;
+      text-decoration:none; 
+      color: #000;
+      margin-top: 1vh;
     }
 }
 
@@ -163,8 +227,36 @@
     border-bottom: solid 5px #ccc;
     }
     .card__overviewtext{
-    font-size: 12px;
     line-height: 150%;
     }
     
+    .content-edit-dellet{
+      border:1px solid #000;
+      border-width:thick; 
+      border-radius: 10px;
+      padding: 1vh;
+      text-decoration:none; 
+      color: #000;
+      margin-left: 2px;
+    }
+    .content-new-buttn{
+      background-color: #FFF;
+      border:1px solid #000;
+      border-width:thick; 
+      border-radius: 10px;
+      padding: 1vh;
+      text-decoration:none; 
+      color: #000;
+      margin-top: 1vh;
+    }
+  
+    .content-new-butt2{
+      background-color: #FFF;
+      border:1px solid #000;
+      border-radius: 10px;
+      padding: 1vh;
+      text-decoration:none; 
+      color: #000;
+      margin-top: 1vh;
+    }
 }
