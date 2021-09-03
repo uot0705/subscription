@@ -9,8 +9,8 @@
   font-weight: bolder; 
 }
 .title-contents-image{
-  height: 16vh;
-  width: 18vw;
+  height: 180px;
+  width: 350px;
 }
 
 .header-user{
@@ -28,17 +28,17 @@
 }
 .header-aisatu{
   color: #000;
-  font-size: 3vh;
+  font-size: 30px;
 }
 .header-nickname{
   color: #000;
-  font-size: 3vh;
+  font-size: 35px;
   border-bottom:1px solid;
   margin-right: 1vw;
 }
 .header-nickname-m{
   color: #000;
-  font-size: 3vh;
+  font-size: 30px;
   margin-right: 1vw;
 }
 .user-menu{
@@ -66,8 +66,8 @@
     font-weight: bolder; 
   }
   .title-contents-image{
-    height: 12vh;
-    width: 32vw;
+    height: 180px;
+    width: 350px;
   }
   
   .header-user{
@@ -84,17 +84,17 @@
   }
   .header-aisatu{
     color: #000;
-    font-size: 2vh;
+    font-size: 30px;
   }
   .header-nickname{
     color: #000;
-    font-size: 3vh;
+    font-size: 35px;
     border-bottom:1px solid;
     margin-right: 1vw;
   }
   .header-nickname-m{
     color: #000;
-    font-size: 2vh;
+    font-size: 30px;
     margin-right: 1vw;
   }
   .user-menu{
@@ -121,10 +121,9 @@
     font-weight: bolder; 
   }
   .title-contents-image{
-    height: 10vh;
-    width: 45vw;
+    height: 110px;
+    width: 220px;
   }
-  
   .header-user{
     margin-left:auto;
     padding: 5vh 5vw 0 0;
@@ -140,17 +139,17 @@
   }
   .header-aisatu{
     color: #000;
-    font-size: 4vw;
+    font-size: 25px;
   }
   .header-nickname{
     color: #000;
-    font-size: 5vw;
+    font-size: 30px;
     border-bottom:1px solid;
     margin-right: 3vw;
   }
   .header-nickname-m{
     color: #000;
-    font-size: 3vw;
+    font-size: 25px;
     margin-right: 1vw;
   }
   .user-menu{
