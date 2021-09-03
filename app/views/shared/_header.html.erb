@@ -8,7 +8,9 @@
 <div class='header-user'>
   <div class="user-title">
    <p class="header-nickname"><%= "#{current_user.nickname}"  %></p>
+   <p class="header-mypege">マイページ</p>
    <p class="header-aisatu">さん</p>
+
    </div>
 
 <div class="user-menu">
@@ -30,6 +32,15 @@
 $(function(){
   $('.user-menu').hide();
   $('.header-nickname').on('click', () => {
+    $('.user-menu').toggle();
+    });
+});
+</script>
+
+<script>
+$(function(){
+  $('.user-menu').hide();
+  $('.header-mypege').on('click', () => {
     $('.user-menu').toggle();
     });
 });

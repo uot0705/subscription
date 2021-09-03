@@ -50,11 +50,10 @@
   }
 
   .card__titletext{
-  font-size: 20px;
-  font-weight: bold;
+  font-size: inherit;
   line-height: 125%;
   margin-top: 10px;
-  border-bottom: solid 5px #ccc;
+  
   }
  
   .card__overviewtext{
@@ -83,32 +82,35 @@
     }
 
   .content-edit-dellet{
-    border:1px solid #000;
+    border:2px solid #000;
     border-radius: 10px;
     padding: 1vh;
     text-decoration:none; 
     color: #000;
     margin-left: 2px;
+    font-weight: bolder;
   }
   .content-new-buttn{
     background-color: #FFF;
-    border:1px solid #000;
-    border-width:thick; 
+    border:2px solid #000;
     border-radius: 10px;
     padding: 1vh;
     text-decoration:none; 
     color: #000;
     margin-top: 1vh;
+    font-weight: bolder;
+    cursor: pointer;
   }
 
   .content-new-butt2{
     background-color: #FFF;
-    border:1px solid #000;
+    border:2px solid #000;
     border-radius: 10px;
     padding: 1vh;
     text-decoration:none; 
     color: #000;
     margin-top: 1vh;
+    font-weight: bolder;
   }
 }
 @media  (min-width: 599px) and (max-width: 1024px) {
@@ -157,11 +159,9 @@
 
     
     .card__titletext{
-    font-size: 20px;
-    font-weight: bold;
+      font-size: inherit;
     line-height: 125%;
     margin-top: 10px;
-    border-bottom: solid 5px #ccc;
     }
     .card__overviewtext{
       line-height: 150%;
@@ -186,33 +186,35 @@
           margin-top: 5vh;
         }
     .content-edit-dellet{
-      border:1px solid #000;
-      border-width:thick; 
+      border:2px solid #000;
       border-radius: 10px;
       padding: 1vh;
       text-decoration:none; 
       color: #000;
       margin-left: 2px;
+      font-weight: bolder;
     }
     .content-new-buttn{
       background-color: #FFF;
-      border:1px solid #000;
-      border-width:thick; 
+      border:2px solid #000; 
       border-radius: 10px;
       padding: 1vh;
       text-decoration:none; 
       color: #000;
       margin-top: 1vh;
+      font-weight: bolder;
+      cursor: pointer;
     }
   
     .content-new-butt2{
       background-color: #FFF;
-      border:1px solid #000;
+      border:2px solid #000;
       border-radius: 10px;
       padding: 1vh;
       text-decoration:none; 
       color: #000;
       margin-top: 1vh;
+      font-weight: bolder;
     }
 }
 
@@ -263,11 +265,9 @@
     }
 
     .card__titletext{
-    font-size: 12px;
-    font-weight: bold;
+      font-size: inherit;
     line-height: 125%;
     margin-top: 10px;
-    border-bottom: solid 5px #ccc;
     }
     .card__overviewtext{
       line-height: 150%;
@@ -292,32 +292,34 @@
           margin-top: 5vh;
         }
     .content-edit-dellet{
-      border:1px solid #000;
-      border-width:thick; 
+      border:2px solid #000;
       border-radius: 10px;
       padding: 1vh;
       text-decoration:none; 
       color: #000;
       margin-left: 2px;
+      font-weight: bolder;
     }
     .content-new-buttn{
       background-color: #FFF;
-      border:1px solid #000;
-      border-width:thick; 
+      border:2px solid #000;
       border-radius: 10px;
       padding: 1vh;
       text-decoration:none; 
       color: #000;
       margin-top: 1vh;
+      font-weight: bolder;
+      cursor: pointer;
     }
   
     .content-new-butt2{
       background-color: #FFF;
-      border:1px solid #000;
+      border:2px solid #000;
       border-radius: 10px;
       padding: 1vh;
       text-decoration:none; 
       color: #000;
       margin-top: 1vh;
+      font-weight: bolder;
     }
 }

@@ -44,17 +44,17 @@ body {
 .input-default{
   width: 80vh;
   height: 3vw;
-  border-width:thick; 
   border-radius: 10px;
   border-color: #000;
+  border:2px solid;
 }
 .submit-botan{
   background-color: #fff;
-padding: 1vh 2vw;
-  border-width:thick; 
+padding: 10px 30px;
   border-radius: 10px;
   border-color: #000;
-  font-weight: bolder; 
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 /*入力確認*/
@@ -166,13 +166,12 @@ padding: 1vh 2vw;
 }
 .loguin-botan{
   background-color: #fff;
-  width: 12vh;
-  height: 3vw;
-  margin-top: 1vh;
-  border-width:thick; 
+  padding: 10px 30px;
+  margin-top: 1vh; 
   border-radius: 10px;
   border-color: #000;
   font-weight: bolder; 
+  cursor: pointer;
 }
 
 .devise-botan{
@@ -181,7 +180,7 @@ padding: 1vh 2vw;
   padding: 1vh ;
   margin: 5vh 1vw 0 0;
   font-weight: bolder; 
-  border:1px solid #000;
+  border:2px solid #000;
   border-radius: 10px;
   text-decoration:none; 
   text-align: center;
@@ -189,10 +188,10 @@ padding: 1vh 2vw;
 .devise-botan2{
   background-color: #fff;
   color: #000;
-  padding: 1vh ;
+  padding: 10px 30px ;
   margin-top: 2vh ;
   font-weight: bolder; 
-  border:1px solid #000;
+  border:2px solid #000;
   border-radius: 10px;
   text-decoration:none; 
   text-align: center;
@@ -269,17 +268,17 @@ padding: 1vh 2vw;
   .input-default{
     width: 50vw;
     height: 3vw;
-    border-width:thick; 
     border-radius: 10px;
     border-color: #000;
+    border:2px solid;
   }
   .submit-botan{
-    padding: 1vh;
-    background-color: #fff;
-    border-width:thick; 
-    border-radius: 10px;
+    padding: 10px 30px;;
+    background-color: #fff; 
     border-color: #000;
+    border-radius: 10px;
     font-weight: bolder; 
+    cursor: pointer;
   }
   
   /*入力確認*/
@@ -394,11 +393,12 @@ padding: 1vh 2vw;
   }
   .loguin-botan{
     background-color: #fff;
-    padding: 1vh ;
-    border-width:thick; 
+    margin-top: 1vh;
+    padding: 10px 30px;
     border-radius: 10px;
     border-color: #000;
     font-weight: bolder; 
+    cursor: pointer;
   }
   
   .devise-botan{
@@ -408,7 +408,7 @@ padding: 1vh 2vw;
     margin: 5vh 1vw 0 0;
     font-size: 17px;
     font-weight: bolder; 
-    border:1px solid #000;
+    border:2px solid #000;
     border-radius: 10px;
     text-decoration:none; 
     text-align: center;
@@ -416,10 +416,10 @@ padding: 1vh 2vw;
   .devise-botan2{
     background-color: #fff;
     color: #000;
-    padding: 1vh ;
-    margin-top: 2vh ;
-    font-weight: bolder; 
-    border:1px solid #000;
+    padding: 10px 30px; ;
+  margin-top: 2vh ;
+  font-weight: bolder; 
+  border:2px solid #000;
     border-radius: 10px;
     text-decoration:none; 
     text-align: center;
@@ -499,17 +499,17 @@ padding: 1vh 2vw;
   .input-default{
     width: 50vw;
     height: 5vw;
-    border-width:thick; 
     border-radius: 10px;
     border-color: #000;
+    border:2px solid;
   }
   .submit-botan{
-    padding: 1vh;
+    padding: 10px 30px;;
     background-color: #fff;
-    border-width:thick; 
-    border-radius: 10px;
     border-color: #000;
     font-weight: bolder; 
+    border-radius: 10px;
+    cursor: pointer;
   }
   .form-text-c{
     font-size: 4vw;
@@ -624,11 +624,12 @@ padding: 1vh 2vw;
   }
   .loguin-botan{
     background-color: #fff;
-    padding: 1vh ;
-    border-width:thick; 
+    margin-top: 1vh;
+    padding: 10px 30px;
     border-radius: 10px;
     border-color: #000;
     font-weight: bolder; 
+    cursor: pointer;
   }
   
   .devise-botan{
@@ -638,7 +639,7 @@ padding: 1vh 2vw;
     margin: 5vh 1vw 0 0;
     font-size: 17px;
     font-weight: bolder; 
-    border:1px solid #000;
+    border:2px solid #000;
     border-radius: 10px;
     text-decoration:none; 
     text-align: center;
@@ -647,10 +648,10 @@ padding: 1vh 2vw;
   .devise-botan2{
     background-color: #fff;
     color: #000;
-    padding: 1vh ;
+    padding: 10px 30px; ;
     margin-top: 2vh ;
     font-weight: bolder; 
-    border:1px solid #000;
+    border:2px solid #000;
     border-radius: 10px;
     text-decoration:none; 
     text-align: center;

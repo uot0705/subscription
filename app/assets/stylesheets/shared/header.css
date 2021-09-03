@@ -35,6 +35,10 @@
   font-size: 35px;
   border-bottom:1px solid;
   margin-right: 1vw;
+  cursor: pointer;
+}
+.header-mypege{
+  display: none;
 }
 .header-nickname-m{
   color: #000;
@@ -66,8 +70,8 @@
     font-weight: bolder; 
   }
   .title-contents-image{
-    height: 180px;
-    width: 350px;
+    height: 150px;
+    width: 320px;
   }
   
   .header-user{
@@ -84,17 +88,21 @@
   }
   .header-aisatu{
     color: #000;
-    font-size: 30px;
+    font-size: 25px;
   }
   .header-nickname{
     color: #000;
-    font-size: 35px;
+    font-size: 30px;
     border-bottom:1px solid;
     margin-right: 1vw;
+    cursor: pointer;
+  }
+  .header-mypege{
+    display: none;
   }
   .header-nickname-m{
     color: #000;
-    font-size: 30px;
+    font-size: 20px;
     margin-right: 1vw;
   }
   .user-menu{
@@ -121,8 +129,8 @@
     font-weight: bolder; 
   }
   .title-contents-image{
-    height: 110px;
-    width: 220px;
+    height: 80px;
+    width: 190px;
   }
   .header-user{
     margin-left:auto;
@@ -138,22 +146,25 @@
     
   }
   .header-aisatu{
-    color: #000;
-    font-size: 25px;
+    display: none;
   }
   .header-nickname{
+    display: none;
+  }
+  .header-mypege{
     color: #000;
-    font-size: 30px;
+    font-size: 20px;
     border-bottom:1px solid;
     margin-right: 3vw;
+    cursor: pointer;
   }
   .header-nickname-m{
     color: #000;
-    font-size: 25px;
+    font-size: 12px;
     margin-right: 1vw;
   }
   .user-menu{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .user-menu-li {
     color: #FFF;
