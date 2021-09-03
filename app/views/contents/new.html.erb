@@ -32,10 +32,15 @@
     <%# 画像 %>
     <div class="card__textbox">
       <div class="card__overviewtext">
-       <h2>Icon Image</h2>
+       <h2>Icon Image(※画像なしでも登録可)</h2>
+       <%= f.file_field :image, class:"card__titletext"  %>
+       
       </div>
-     <%= f.file_field :image, class:"card__titletext"  %>
-     <h3>※画像なしでも登録可</h3>
+      <p class ="gazoukensaku-font">↓画像検索はこちら</p>
+     <div class="card__overviewtext2">
+     <script async src="https://cse.google.com/cse.js?cx=c8c68f8277fa15877"></script>
+      <div class="gcse-search"></div>
+      </div>
     </div>
 
     <%# 下部ボタン %>

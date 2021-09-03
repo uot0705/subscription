@@ -42,13 +42,13 @@
   background: #ffffff;
   box-sizing: border-box;
   border-bottom: solid 5px #ccc;
-  
   display: flex;
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
   
   }
+
   .card__titletext{
   font-size: 20px;
   font-weight: bold;
@@ -56,9 +56,31 @@
   margin-top: 10px;
   border-bottom: solid 5px #ccc;
   }
+ 
   .card__overviewtext{
-  line-height: 150%;
-  }
+    line-height: 150%;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    }
+
+  .card__overviewtext2{
+    line-height: 150%;
+    
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    border: solid 5px #ccc;
+    
+    }
+    .gazoukensaku-font{
+      font-weight: bold;
+      margin-top: 5vh;
+    }
 
   .content-edit-dellet{
     border:1px solid #000;
@@ -132,6 +154,8 @@
     align-items: center; 
     
     }
+
+    
     .card__titletext{
     font-size: 20px;
     font-weight: bold;
@@ -140,9 +164,27 @@
     border-bottom: solid 5px #ccc;
     }
     .card__overviewtext{
-    line-height: 150%;
-    }
-
+      line-height: 150%;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      }
+      .card__overviewtext2{
+        line-height: 150%;
+        
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        border: solid 5px #ccc;
+        
+        }
+        .gazoukensaku-font{
+          font-weight: bold;
+          margin-top: 5vh;
+        }
     .content-edit-dellet{
       border:1px solid #000;
       border-width:thick; 
@@ -219,6 +261,7 @@
     align-items: center; 
     
     }
+
     .card__titletext{
     font-size: 12px;
     font-weight: bold;
@@ -227,9 +270,27 @@
     border-bottom: solid 5px #ccc;
     }
     .card__overviewtext{
-    line-height: 150%;
-    }
-    
+      line-height: 150%;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      }
+      .card__overviewtext2{
+        line-height: 150%;
+        
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        border: solid 5px #ccc;
+        
+        }
+        .gazoukensaku-font{
+          font-weight: bold;
+          margin-top: 5vh;
+        }
     .content-edit-dellet{
       border:1px solid #000;
       border-width:thick; 
