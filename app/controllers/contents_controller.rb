@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+  before_action :authenticate_user!, except: [:index,:edit]
   before_action :find_action, only: [:edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
   helper_method :sort_column, :sort_direction
@@ -47,7 +48,9 @@ class ContentsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to root_path unless current_user == @content.user
+     unless current_user == @content.user
+      redirect_to root_path
+     end
   end
 
   def sort_direction
