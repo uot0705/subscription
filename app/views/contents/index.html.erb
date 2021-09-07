@@ -10,11 +10,15 @@
 
 
 <div class='login-main-body'>
-  
+
   <%# サブスクTITLE %>
   <div class="sabusuku-title" >
      <h2 class='sabusuku-title-name'>Subscription</h2>
-     <%= link_to 'サブスク登録', new_content_path, class: "content-new" %></li>
+     <div class="change-memo-box" >
+     <%= link_to 'サブスク登録', new_content_path, class: "content-new" %>
+     <%= link_to 'メモ',content_index2_path, class: "content-memo" %>
+
+     </div>
   </div>
   <%# マイサブスク一覧表示 %>
   <div class='login-contents'>
@@ -54,6 +58,7 @@
             <%= image_tag "mitoukou", class: "content-img" %>
             <% end %>
             </div>
+
        </div>
        </li>
        <% end %>
@@ -118,6 +123,9 @@
         $('.sort-list').toggle();
         });
     });
+
+   
+
 
   </script>
 

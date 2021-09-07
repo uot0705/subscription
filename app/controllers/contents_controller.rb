@@ -1,11 +1,15 @@
 class ContentsController < ApplicationController
-  before_action :authenticate_user!, except: [:index,:edit]
+  before_action :authenticate_user!, except: [:index]
   before_action :find_action, only: [:edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
   helper_method :sort_column, :sort_direction
 
   def index
     @content = Content.where(user: current_user).order("#{sort_column} #{sort_direction}")
+  end
+
+  def index2
+    @content = Content.where(user: current_user)
   end
 
   def new
@@ -40,7 +44,7 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:name, :price, :image).merge(user_id: current_user.id)
+    params.require(:content).permit(:name, :price, :image,:memo).merge(user_id: current_user.id)
   end
 
   def find_action

@@ -14,7 +14,7 @@
             <h2>Price(月額)</h2>
           <div>
             <span class="sell-yen">¥</span>
-            <%= f.text_field :price,  placeholder:"例）300" ,id:"num_only", oncopy:"return false" ,onpaste:"return false"%>
+            <%= f.text_field :price,  placeholder:"必須" ,id:"num_only", oncopy:"return false" ,onpaste:"return false"%>
           </div>
         </div>
       </div>
@@ -46,7 +46,12 @@
       <div class="gcse-search"></div>
       </div>
     </div>
-
+<div class="card__textbox">
+      <div class="card__overviewtext">
+       <h2>Memo</h2>
+      </div>
+      <%= f.text_area :memo, class:"card__memotext",  placeholder:"メモ 100文字まで",maxlength:"100" %>
+    </div>
     <%# 下部ボタン %>
      <div class="card__textbox">
       <%= f.submit "編集" ,:class=> "submit-botan" %>

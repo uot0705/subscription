@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   root to: "contents#index"
   resources :contents ,only: [:new ,:create ,:edit ,:update ,:destroy]
+  get 'content/index2' => 'contents#index2'
 
  
 end

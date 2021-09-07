@@ -15,7 +15,7 @@
           </div>
           <div>
             <span class="sell-yen">¥</span>
-            <%= f.text_field :price,   placeholder:"例）300" , id:"num_only", oncopy:"return false" ,onpaste:"return false" %>
+            <%= f.text_field :price,   placeholder:"必須" , id:"num_only", oncopy:"return false" ,onpaste:"return false" %>
           </div>
         </div>
       </div>
@@ -41,6 +41,13 @@
      <script async src="https://cse.google.com/cse.js?cx=c8c68f8277fa15877"></script>
       <div class="gcse-search"></div>
       </div>
+    </div>
+ <%# memo %>
+    <div class="card__textbox">
+      <div class="card__overviewtext">
+       <h2>Memo</h2>
+      </div>
+      <%= f.text_area :memo, class:"card__memotext",  placeholder:"メモ 100文字まで",maxlength:"100" %>
     </div>
 
     <%# 下部ボタン %>

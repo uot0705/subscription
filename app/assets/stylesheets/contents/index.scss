@@ -53,7 +53,10 @@ body{
   margin-left: 20vw;
   font-size: 60px;
 }
-
+.change-memo-box{
+  display: flex;
+  flex-direction: column; 
+}
 .content-new{
   color: #FFF;
   background-color: #000;
@@ -63,6 +66,17 @@ body{
  margin-right: 25vw;
  border-radius: 10px;
 }
+.content-memo{
+  color: #FFF;
+  background-color: #000;
+ font-size: 3vh;
+ text-decoration:none; 
+ padding: 2vh ;
+ margin: 5px 25vw 0 0;
+ border-radius: 10px;
+ text-align: center;
+}
+
 .content-sort{
   width: 25%;
   margin-bottom: 2vh;
@@ -116,6 +130,12 @@ a.sorter {
   width: 100%;
   height: 70%;
   
+}
+.content-memo-view{
+  width: 90%;
+  height: 70%;
+  margin:0 auto;
+  margin-top: 5px;
 }
 
 
@@ -581,7 +601,10 @@ a.sorter {
     margin-left: 15vw;
     font-size: 40px;
   }
-  
+  .change-memo-box {
+    display: flex;
+    flex-direction: column;
+}
   .content-new{
     color: #FFF;
     background-color: #000;
@@ -590,6 +613,16 @@ a.sorter {
    padding: 2vh ;
    margin-right: 20vw;
    border-radius: 10px;
+  }
+  .content-memo{
+    color: #FFF;
+    background-color: #000;
+   font-size: 2vh;
+   text-decoration:none; 
+   padding: 2vh 4vh;
+   margin: 5px 20vw 0 0;
+   border-radius: 10px;
+   text-align: center;
   }
   .content-sort{
     width: 25%;
@@ -642,7 +675,12 @@ a.sorter {
     height: 70%;
     
   }
-  
+  .content-memo-view{
+    width: 90%;
+    height: 70%;
+    margin:0 auto;
+    margin-top: 5px;
+  }
   
   .content-img{
     width: 155px;
@@ -1096,7 +1134,10 @@ a.sorter {
     font-size: 10vw;
     margin-bottom: 3vh;
   }
-  
+  .change-memo-box {
+    display: flex;
+    flex-direction: column;
+}
   .content-new{
     color: #FFF;
     background-color: #000;
@@ -1104,6 +1145,16 @@ a.sorter {
    text-decoration:none; 
    border-radius: 10px;
    padding: 2vh ;
+  }
+  .content-memo{
+    color: #FFF;
+    background-color: #000;
+   font-size: 2vh;
+   text-decoration:none; 
+   padding: 2vh 4vh;
+   margin-top: 5px ;
+   border-radius: 10px;
+   text-align: center;
   }
   .content-sort{
     margin-bottom: 2vh;
@@ -1141,8 +1192,8 @@ a.sorter {
     padding: 2vh 0 0 2vh;
   }
   .all-list{
-    width: 240px;
-    height: 200px;
+    width: 270px;
+    height: 210px;
     margin-top: 1vh;
     display: flex;
     flex-direction: column; 
@@ -1157,7 +1208,13 @@ a.sorter {
     height: 75%;
     
   }
-  
+  .content-memo-view{
+    width: 90%;
+    height: 70%;
+    margin:0 auto;
+    margin-top: 5px;
+    font-size: 14px;
+  }
   .content-img{
     width: 90px;
     height: 90px;
@@ -1167,7 +1224,7 @@ a.sorter {
   }
   .content-name{
     width: 90%;
-    font-size: 10px;
+    font-size: 12px;
   }
   .content-price{
     font-weight: 900; 

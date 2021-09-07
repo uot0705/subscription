@@ -1,0 +1,62 @@
+<%= render "shared/header" %>
+
+
+<h2 class="views-title">メモ</h2>
+<div class='login-contents'>
+    <div class="content-sort">
+    <p class='sort-title'>並び替え<p>
+    <div class ="sort-list">
+        <thead >
+          <tr >
+            <th scope="col"><%= sort_order "name", "タイトル" %></th>
+            <th scope="col"><%= sort_order "price", "金額" %></th>
+            <th scope="col"><%= sort_order "created_at", "追加日" %></th>
+          </tr>
+        </thead>
+      </div>
+    </div>
+    <ul class='content-lists'>
+    <tbody><%# ソート機能 %>
+    <% @content.each do |content| %>
+    <tr>
+      <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
+      <li >
+      <% if content.memo.present? %>
+      <div class='all-list'>
+            <%# タイトル %><%# 金額 %>
+            <div class='content-title'>
+                 <P class='content-name'>
+                 <%= content.name%>
+                 </p>
+                  <p class='content-price'>
+                  <%= "¥#{number_to_currency(content.price)}" %>
+                </p>
+            </div>
+            <%# 画像 %>
+            <div class="content-memo-view">
+  
+            <%= content.memo %>
+            
+            </div>
+
+       </div>
+       
+            <% end %>
+       </li>
+       <% end %>
+    </tr>
+    <% end %>
+    </tbody>
+     </ul>
+   </div>
+  <%# サブスクbody %>
+</div>
+
+ <script>
+    $(function(){
+      $('.sort-list').hide();
+      $('.sort-title').on('click', () => {
+        $('.sort-list').toggle();
+        });
+    });
+  </script>
