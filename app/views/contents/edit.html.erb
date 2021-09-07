@@ -11,7 +11,9 @@
      <%# 金額 %>
      <div class="card__imgframe">
        <div class="price-content">
-            <h2>Price(月額)</h2>
+          <div class="display-flex">
+            <p class="content-input-title">Price</p><p>(月額)</p>
+          </div>
           <div>
             <span class="sell-yen">¥</span>
             <%= f.text_field :price,  placeholder:"必須" ,id:"num_only", oncopy:"return false" ,onpaste:"return false"%>
@@ -22,15 +24,13 @@
     
     <%# TITLE %>
     <div class="card__textbox">
-      <div class="card__overviewtext">
-       <h2>Name</h2>
-      </div>
+       <p class="content-input-title">Name</p>
       <%= f.text_field :name, class:"card__titletext",  placeholder:"必須 20文字まで", maxlength:"20" %>
     </div>
 
     <%# 画像 %>
     <div class="card__textbox">
-              <h2>Icon Image</h2>
+              <p class="content-input-title">Icon Image</p>
        <div class="card__overviewtext">
        <h2 class = "current-imag" >現在のアイコン</h2>
        <% if @content.image.present? %>
@@ -46,10 +46,8 @@
       <div class="gcse-search"></div>
       </div>
     </div>
-<div class="card__textbox">
-      <div class="card__overviewtext">
-       <h2>Memo</h2>
-      </div>
+      <div class="card__textbox">
+       <p class="content-input-title">Memo</p>
       <%= f.text_area :memo, class:"card__memotext",  placeholder:"メモ 100文字まで",maxlength:"100" %>
     </div>
     <%# 下部ボタン %>

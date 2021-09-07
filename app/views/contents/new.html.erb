@@ -10,8 +10,8 @@
      <%# 金額 %>
      <div class="card__imgframe">
        <div class="price-content">
-         <div class="price-text">
-            <h2>Price(月額)<h2>
+          <div class="display-flex">
+            <p class="content-input-title">Price</p><p>(月額)</p>
           </div>
           <div>
             <span class="sell-yen">¥</span>
@@ -23,16 +23,14 @@
     
     <%# TITLE %>
     <div class="card__textbox">
-      <div class="card__overviewtext">
-       <h2>Name</h2>
-      </div>
+      <p class="content-input-title">Name</p>
       <%= f.text_field :name, class:"card__titletext",  placeholder:"(必須 20文字まで)", maxlength:"20" %>
     </div>
 
     <%# 画像 %>
     <div class="card__textbox">
       <div class="card__overviewtext">
-       <h2>Icon Image(※画像なしでも登録可)</h2>
+            <p class="content-input-title">Icon Image</p><p>(※画像なしでも登録可)</p>
        <%= f.file_field :image, class:"card__titletext"  %>
        
       </div>
@@ -44,9 +42,7 @@
     </div>
  <%# memo %>
     <div class="card__textbox">
-      <div class="card__overviewtext">
-       <h2>Memo</h2>
-      </div>
+       <p class="content-input-title">Memo</p>
       <%= f.text_area :memo, class:"card__memotext",  placeholder:"メモ 100文字まで",maxlength:"100" %>
     </div>
 

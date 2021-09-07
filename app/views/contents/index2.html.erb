@@ -1,7 +1,16 @@
 <%= render "shared/header" %>
 
 
-<h2 class="views-title">メモ</h2>
+
+<div class="sabusuku-title" >
+<h2 class="views-title-memo">メモ</h2>
+     <div class="change-memo-box" >
+     <%= link_to 'サブスク登録', new_content_path, class: "content-new" %>
+     <%= link_to '一覧',root_path, class: "content-memo" %>
+    </div>
+</div>
+
+
 <div class='login-contents'>
     <div class="content-sort">
     <p class='sort-title'>並び替え<p>
