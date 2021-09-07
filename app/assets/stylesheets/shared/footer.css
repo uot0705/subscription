@@ -35,7 +35,7 @@
 .footer-light{
   margin-right: 5vw;
   font-weight: bold; 
-  font-size: 2vw;
+  font-size: 35px;
   display: flex;
 }
 
@@ -138,18 +138,18 @@
     margin-left: 5vw;
   }
   .footer-left-m{
-    font-size: 2vw;
+    font-size: 15px;
     cursor: pointer;
   }
   
   .footer-left-a{
     font-weight: bold; 
-    font-size: 3vw;
+    font-size: 25px;
   }
   .footer-light{
     margin-right: 5vw;
     font-weight: bold; 
-    font-size: 5vw;
+    font-size: 33px;
     display: flex;
   }
 
@@ -256,18 +256,18 @@
     margin-left: 5vw;
   }
   .footer-left-m{
-    font-size: 3vw;
+    font-size: 15px;
     cursor: pointer;
   }
   
   .footer-left-a{
     font-weight: bold; 
-    font-size: 4vw;
+    font-size: 25px;
   }
   .footer-light{
     margin-right: 5vw;
     font-weight: bold; 
-    font-size: 6vw;
+    font-size: 30px;
     display: flex;
   }
 
