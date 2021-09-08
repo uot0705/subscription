@@ -36,11 +36,13 @@ Pass: 7777<br>
 ## トップページ
 [![Image from Gyazo](https://i.gyazo.com/6190b8695139c4a6305881b1bb7462e1.gif)](https://gyazo.com/6190b8695139c4a6305881b1bb7462e1)
 ## ユーザー新規登録
-[![Image from Gyazo](https://i.gyazo.com/4d8d7dd967f624d68b9371c013e01d91.png)](https://gyazo.com/4d8d7dd967f624d68b9371c013e01d91)
+[![Image from Gyazo](https://i.gyazo.com/69a15091d097a937cadcf74ded2b3e1e.png)](https://gyazo.com/69a15091d097a937cadcf74ded2b3e1e)
 ## ユーザーページ
-[![Image from Gyazo](https://i.gyazo.com/16add867b4b1f3c8469d8233feb9d335.gif)](https://gyazo.com/16add867b4b1f3c8469d8233feb9d335)
+[![Image from Gyazo](https://i.gyazo.com/0fac265dd149084f75805663500ac564.gif)](https://gyazo.com/0fac265dd149084f75805663500ac564)
+## ユーザーページ（メモ機能）
+[![Image from Gyazo](https://i.gyazo.com/fb28cbf6e8c52a36957b6873ca305696.gif)](https://gyazo.com/fb28cbf6e8c52a36957b6873ca305696)
 ## サブスク登録
-[![Image from Gyazo](https://i.gyazo.com/7ef2f0317f6ee608ad2708a6c3469637.gif)](https://gyazo.com/7ef2f0317f6ee608ad2708a6c3469637)
+[![Image from Gyazo](https://i.gyazo.com/de2cdd7246cefe25befe02e7447cb6f9.gif)](https://gyazo.com/de2cdd7246cefe25befe02e7447cb6f9)
 ## 【メール】新規登録・お知らせ
 □新規登録
 [![Image from Gyazo](https://i.gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0.png)](https://gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0)
@@ -52,6 +54,11 @@ Pass: 7777<br>
 メールにて定期的に、お知らせをすることにしました。<br>
 `②シンプルなデザイン`<br>
 シンプルにすることで、機能的にユーザーが迷うことなく使用できるようにしました。<br> 
+
+（その他）<br>
+・メモ機能<br>
+・サブスク費用を、年・月・週・日の期間で表示<br>
+・コンテンツの並び替え<br>
 
 # ◇使用技術
 □開発環境<br>
@@ -85,6 +92,7 @@ Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code<br>
 | Column               | Type       | Options                        |
 | -----------------    | ---------- | ------------------------------ |
 | name                 | string     | null: false                    |
+| memo                 | string     |                                |
 | price                | integer    | null: false                    |
 | user                 | references | null: false, foreign_key:true  |
 
