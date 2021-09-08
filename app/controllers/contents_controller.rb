@@ -9,7 +9,7 @@ class ContentsController < ApplicationController
   end
 
   def index2
-    @content = Content.where(user: current_user)
+    @content = Content.where(user: current_user).order("#{sort_column} #{sort_direction}")
   end
 
   def new
