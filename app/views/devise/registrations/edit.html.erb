@@ -42,10 +42,13 @@
     <%= f.submit "更新" , :class=> "submit-botan" %>
 </div>
 
+<div class="display-flex-column">
+  <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class: "content-edit-dellet"%></p>
   <div class="display-flex-m-top">
   <p><%= link_to "退会", user_registration_path(current_user.id) ,method: :delete, class: "content-edit-dellet", "data-confirm" => "本当に退会しますか？"%></p>
   <p><%=link_to '戻る', root_path, class: "content-edit-dellet" %></p>
   </div>
+</div>
 
 </div>
 <% end %>

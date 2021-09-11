@@ -7,16 +7,11 @@
    <% if user_signed_in? %>
 <div class='header-user'>
   <div class="user-title">
-   <p class="header-nickname"><%= "#{current_user.nickname}"  %></p>
-   <p class="header-mypege">マイページ</p>
+   <%= link_to  "#{current_user.nickname}" ,edit_user_registration_path ,class:"header-nickname" %>
+   <%= link_to  "マイページ" ,edit_user_registration_path ,class:"header-mypege" %>
    <p class="header-aisatu">さん</p>
 
    </div>
-
-<div class="user-menu">
-  <%= link_to '編集', edit_user_registration_path, class:"user-menu-li" %>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:"user-menu-li"%>
-  </div>
  
  </div>
   <% else %>
@@ -24,25 +19,6 @@
     <p class = "header-nickname-m">こんばんは、ゲストさん</p>
      </div>
   <% end %>
-
-
-
   </div>
-    <script>
-$(function(){
-  $('.user-menu').hide();
-  $('.header-nickname').on('click', () => {
-    $('.user-menu').toggle();
-    });
-});
-</script>
 
-<script>
-$(function(){
-  $('.user-menu').hide();
-  $('.header-mypege').on('click', () => {
-    $('.user-menu').toggle();
-    });
-});
-</script>
 </header>
