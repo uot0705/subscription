@@ -36,6 +36,7 @@
     </div>
     <ul class='content-lists'>
     <tbody><%# ソート機能 %>
+    
     <% @content.each do |content| %>
     <tr>
       <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
@@ -48,7 +49,7 @@
                  </p>
                   <p class='content-price'>
                   <%= "¥#{number_to_currency(content.price)}" %>
-                </p>
+                  </p>
             </div>
             <%# 画像 %>
             <div class="image-absolute">
@@ -62,6 +63,7 @@
        </div>
        </li>
        <% end %>
+
     </tr>
     <% end %>
     </tbody>
