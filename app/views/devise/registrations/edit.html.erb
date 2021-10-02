@@ -1,3 +1,7 @@
+<head>
+    <title><%= "ユーザー編集 / Subscription"%></title>
+</head>
+
 <%= render "shared/header" %>
 <h2 class="views-title">ユーザー編集</h2>
 <%= form_with model: current_user, url: user_registration_path, method: :put, local: true do |f| %>
