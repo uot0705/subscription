@@ -26,6 +26,9 @@
 }
 .footer-left-m{
   cursor: pointer;
+  border: 1px solid;
+  border-color: #C0C0C0;
+  text-align: center;
 }
 
 .footer-left-a{
@@ -140,6 +143,9 @@
   .footer-left-m{
     font-size: 15px;
     cursor: pointer;
+    border: 1px solid;
+    border-color: #C0C0C0;
+    text-align: center;
   }
   
   .footer-left-a{
@@ -258,6 +264,9 @@
   .footer-left-m{
     font-size: 15px;
     cursor: pointer;
+    border: 1px solid;
+    border-color: #C0C0C0;
+    text-align: center;
   }
   
   .footer-left-a{
