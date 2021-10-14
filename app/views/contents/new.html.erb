@@ -33,11 +33,11 @@
     <%# 画像 %>
     <div class="card__textbox">
       <div class="card__overviewtext">
-            <p class="content-input-title">Icon Image</p><p>(※画像なしでも登録可)</p>
+            <p class="content-input-title">Icon</p><p>(※画像なしでも登録可)</p>
        <%= f.file_field :image, class:"card__titletext"  %>
        
       </div>
-      <p class ="gazoukensaku-font">↓画像検索はこちら</p>
+      <p class ="gazoukensaku-font">画像検索はこちら</p>
      <div class="card__overviewtext2">
      <script async src="https://cse.google.com/cse.js?cx=c8c68f8277fa15877"></script>
       <div class="gcse-search"></div>
@@ -71,6 +71,14 @@
       	$(e.currentTarget).val(value);
     });
 });
+
+
+    $(function(){
+      $('.card__overviewtext2').hide();
+      $('.gazoukensaku-font').on('click', () => {
+        $('.card__overviewtext2').toggle();
+        });
+    });
   </script>
 
 

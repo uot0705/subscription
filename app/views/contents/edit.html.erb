@@ -33,9 +33,9 @@
 
     <%# 画像 %>
     <div class="card__textbox">
-              <p class="content-input-title">Icon Image</p>
+              <p class="content-input-title">Icon</p>
        <div class="card__overviewtext">
-       <h2 class = "current-imag" >現在のアイコン</h2>
+       
        <% if @content.image.present? %>
        <%= image_tag @content.image, class: "content-img-edit" %>
         <% else %>
@@ -43,7 +43,7 @@
         <% end %>
       </div>
      <%= f.file_field :image,class:"card__titletext"  %>
-      <p class ="gazoukensaku-font">↓画像検索はこちら</p>
+      <p class ="gazoukensaku-font">画像検索はこちら</p>
      <div class="card__overviewtext2">
      <script async src="https://cse.google.com/cse.js?cx=c8c68f8277fa15877"></script>
       <div class="gcse-search"></div>
@@ -81,6 +81,13 @@
       	$(e.currentTarget).val(value);
     });
 });
+
+$(function(){
+      $('.card__overviewtext2').hide();
+      $('.gazoukensaku-font').on('click', () => {
+        $('.card__overviewtext2').toggle();
+        });
+    });
 
   </script>
 </div>
