@@ -122,9 +122,9 @@ a.sorter {
   display: flex;
   flex-direction: column; 
   justify-content:space-between;
-  border:1px solid;
+  border: solid 1px #C0C0C0;
   border-radius: 10px;
-  border-color: #000;
+  
 }
 
 .image-absolute{
@@ -661,9 +661,9 @@ a.sorter {
     margin-bottom: 1vh;
     flex-direction: column; 
     justify-content:space-between;
-    border:1px solid;
+    border: solid 1px #C0C0C0;
     border-radius: 10px;
-    border-color: #000;
+   
   }
   
   .image-absolute{
@@ -1189,9 +1189,8 @@ a.sorter {
     display: flex;
     flex-direction: column; 
     justify-content:space-between;
-    border:1px solid;
+    border: solid 1px #C0C0C0;
     border-radius: 10px;
-    border-color: #000;
   }
   
   .image-absolute{
