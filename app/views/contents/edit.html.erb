@@ -7,7 +7,7 @@
 
 
   <h2 class="views-title">サブスク編集</h2>
-  <%= form_with model: @content,  local: true do |f| %>
+<%= form_with model: @content,  local: true do |f| %>
  <%= render 'shared/error_messages', model: f.object %>
   <div class="card">
 
@@ -28,7 +28,7 @@
     <%# TITLE %>
     <div class="card__textbox">
        <p class="content-input-title">Name</p>
-      <%= f.text_field :name, class:"card__titletext",  placeholder:"必須 20文字まで", maxlength:"20" %>
+    <%= f.text_field :name, class:"card__titletext",  placeholder:"必須 20文字まで", maxlength:"20" %>
     </div>
 
     <%# 画像 %>
@@ -37,12 +37,12 @@
        <div class="card__overviewtext">
        
        <% if @content.image.present? %>
-       <%= image_tag @content.image, class: "content-img-edit" %>
+       <%= image_tag @content.image, class: "content-img-edit" ,id:"img1"%>
         <% else %>
-        <%= image_tag "mitoukou", class: "content-img-edit" %>
+        <%= image_tag "mitoukou", class: "content-img-edit" ,id:"img1" %>
         <% end %>
       </div>
-     <%= f.file_field :image,class:"card__titletext"  %>
+     <%= f.file_field :image , class:"card__titletext" ,id:"myfile"%>
       <p class ="gazoukensaku-font">画像検索はこちら</p>
      <div class="card__overviewtext2">
      <script async src="https://cse.google.com/cse.js?cx=c8c68f8277fa15877"></script>
@@ -64,7 +64,7 @@
      </div>
     <%# /下部ボタン %>
 
-  <% end %>
+<% end %>
 
  </div>
 
@@ -89,5 +89,28 @@ $(function(){
         });
     });
 
+$(function(){
+  $('#myfile').change(function(e){
+    //ファイルオブジェクトを取得する
+    var file = e.target.files[0];
+    var reader = new FileReader();
+ 
+    //画像でない場合は処理終了
+    if(file.type.indexOf("image") < 0){
+      alert("画像ファイルを指定してください。");
+      return false;
+    }
+ 
+    //アップロードした画像を設定する
+    reader.onload = (function(file){
+      return function(e){
+        $("#img1").attr("src", e.target.result);
+        $("#img1").attr("title", file.name);
+      };
+    })(file);
+    reader.readAsDataURL(file);
+ 
+  });
+});
   </script>
 </div>

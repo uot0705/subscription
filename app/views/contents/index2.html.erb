@@ -35,16 +35,22 @@
       <li >
       <% if content.memo.present? %>
       <div class='all-list'>
-            <%# タイトル %><%# 金額 %>
+            <%# タイトル %><%# 金額 %><%# 画像 %>
             <div class='content-title'>
                  <P class='content-name'>
                  <%= content.name%>
                  </p>
                   <p class='content-price'>
-                  <%= "¥#{number_to_currency(content.price)}" %>
+            <% if content.image.present? %>
+            <%= image_tag content.image, class: "content-img-memo" %>
+            <% else %>
+            <%= image_tag "mitoukou", class: "content-img-memo" %>
+            <% end %>
+            
+            <%= "¥#{number_to_currency(content.price)}" %>
                 </p>
             </div>
-            <%# 画像 %>
+            
             <div class="content-memo-view">
   
             <%= content.memo %>
