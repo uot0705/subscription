@@ -82,7 +82,9 @@
     });
 
   $(function(){
+  $('#img1').hide();
   $('#myfile').change(function(e){
+  $('#img1').toggle();
     //ファイルオブジェクトを取得する
     var file = e.target.files[0];
     var reader = new FileReader();
