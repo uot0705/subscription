@@ -41,17 +41,17 @@ class ContentsController < ApplicationController
     redirect_to root_path
   end
 
-# this action will be called via ajax
-def sort
-  content = Content.find(params[:content_id])
-  content.update(content_params)
-  render body: nil
-end
+  # this action will be called via ajax
+  def sort
+    content = Content.find(params[:content_id])
+    content.update(content_params)
+    render body: nil
+  end
 
   private
 
   def content_params
-    params.require(:content).permit(:name, :price, :image,:memo,:row_order_position).merge(user_id: current_user.id)
+    params.require(:content).permit(:name, :price, :image, :memo, :row_order_position).merge(user_id: current_user.id)
   end
 
   def find_action
@@ -59,9 +59,7 @@ end
   end
 
   def move_to_index
-     unless current_user == @content.user
-      redirect_to root_path
-     end
+    redirect_to root_path unless current_user == @content.user
   end
 
   def sort_direction
@@ -71,7 +69,4 @@ end
   def sort_column
     Content.column_names.include?(params[:sort]) ? params[:sort] : 'id'
   end
-
- 
-
 end
