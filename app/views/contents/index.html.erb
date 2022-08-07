@@ -2,32 +2,24 @@
     <title><%= Subscription%></title>
 </head>
 <%= render "shared/header" %>
-
 <div class="wrap">
-
 <%# ユーザーログイン有無で条件分岐 %>
 <% if user_signed_in? %>
- 
 <%# ソート機能TITLE %>
-
-
-
 <div class='login-main-body'>
-
   <%# サブスクTITLE %>
   <div class="sabusuku-title" >
      <h2 class='sabusuku-title-name'>Subscription</h2>
      <div class="change-memo-box" >
      <%= link_to 'サブスク登録', new_content_path, class: "content-new" %>
      <%= link_to 'メモ',content_index2_path, class: "content-memo" %>
-
      </div>
   </div>
   <%# マイサブスク一覧表示 %>
   <div class='login-contents'>
     <div class="content-sort">
     <p class='sort-title'>並び替え<p>
-    <div class ="sort-list">
+      <div class ="sort-list">
         <thead >
           <tr >
             <th scope="col"><%= sort_order "name", "タイトル" %></th>
@@ -38,47 +30,23 @@
       </div>
     </div>
     <ul class='content-lists'>
-    <tbody><%# ソート機能 %>
-    
-    <% @content.each do |content| %>
-    <tr>
-      <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
-      <li >
-      <div class='all-list'>
-            <%# タイトル %><%# 金額 %>
-            <div class='content-title'>
-                 <P class='content-name'>
-                 <%= content.name%>
-                 </p>
-                  <p class='content-price'>
-                  <%= "¥#{number_to_currency(content.price)}" %>
-                  </p>
-            </div>
-            <%# 画像 %>
-            <div class="image-absolute">
-            <% if content.image.present? %>
-            <%= image_tag content.image, class: "content-img" %>
-            <% else %>
-            <%= image_tag "mitoukou", class: "content-img" %>
-            <% end %>
-            </div>
-
-       </div>
-       </li>
-       <% end %>
-
-    </tr>
-    <% end %>
-    </tbody>
+    <table>
+      <tbody id="dreams_list">
+      <%= render partial: 'content', collection: @content %>
+      </tbody>
+    </table>
      </ul>
    </div>
+
+
+
   <%# サブスクbody %>
 </div>
 
 <%= render "shared/footer" %>
 </div>
     <% else %>
-<div class="top-pege">
+<div class="top-page">
     <%# 未ログイン %>
   <div class='main-body'>
       <div class='left-body'>
@@ -90,7 +58,6 @@
         </div>
         </div>
     </div>
-
     <%= render "anime" %>
 </div>
 
@@ -104,11 +71,9 @@
             <%= image_tag "happy-m.jpeg", class:"footer-image" %>
             </div>
           </div>
-
           <div class="right-footer">
             <p class="footer-title">サブスクを使いこなし</p>
             <p class="footer-title2">暮らしをハッピーに。</p>
-            
             <p class="footer-title-bottom">サブスクの管理なら、毎月の契約状況を自動でお知らせが受けられます。</p>
             <p class="footer-title-bottom">サブスクを使いこなすには、契約の把握から始めましょう。</p>
             </pre>
@@ -128,10 +93,6 @@
         $('.sort-list').toggle();
         });
     });
-
-   
-
-
   </script>
 
 

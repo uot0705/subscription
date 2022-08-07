@@ -1,0 +1,42 @@
+<%= content_tag "tr", id: "content-#{content.id}", class: "item", data: { model_name: content.class.name.underscore, update_url: content_sort_path(content)} do %>
+
+ 
+     <td>
+      <%= link_to(edit_content_path(content.id) ,class: "content-edit" ) do %>
+      <li >
+      <div class='all-list'>
+            <%# タイトル %><%# 金額 %>
+            <div class='content-title'>
+              <P class='content-name'>
+                <%= content.name%>
+              </p>
+              <p class='content-price'>
+                <%= "¥#{number_to_currency(content.price)}" %>
+              </p>
+            </div>
+            <%# 画像 %>
+            <div class="image-absolute">
+              <% if content.image.present? %>
+                <%= image_tag content.image, class: "content-img" %>
+              <% else %>
+                <%= image_tag "mitoukou", class: "content-img" %>
+              <% end %>
+            </div>
+
+       </div>
+       </li>
+       <% end %>
+
+    </td>
+  
+  <script>
+ $(function(){
+   $(".all-list").hover(function() {
+     $(this).css("background-color", "#EEEEEE");
+    } , 
+    function() {
+      $(this).css( "background-color","");
+    });
+  });
+  </script>
+<% end %>

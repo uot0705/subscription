@@ -58,7 +58,7 @@
       <%= f.submit "編集" ,:class=> "submit-botan" %>
 
       <div class="display-flex-m-top">
-      <p><%= link_to "削除", content_path,method: :delete ,class: "content-edit-dellet"%></p>
+      <p><%= link_to "削除", content_path,method: :delete ,class: "content-edit-dellet" ,data: { confirm: "元に戻せません。本当に削除しますか？" }%></p>
       <p><%=link_to '戻る', root_path, class: "content-edit-dellet" %></p>
       <div>
      </div>

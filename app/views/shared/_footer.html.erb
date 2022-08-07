@@ -1,24 +1,17 @@
 
 <footer class="footer">
-
-
-
   <div class='footer-price'>
-
     <div class = "footer-left" >
     <p class = "footer-left-m" >▷Monthly</p>
     <p class = "footer-left-a">Average</p> 
     </div>
-
     <div class = "footer-light" id ="totale-price">
     <p class ="totale-price" id = 't-price' ><%= "¥#{number_to_currency(@content.sum(:price))}" %></p>
     </div>
-
   </div>
+  <div>
+  <div>
   
-  
-
-
         <%# 【非同期通信】期間、合計金額 #%>
     <script>
 
@@ -27,25 +20,25 @@
         if ($(this).text() === '▷Monthly') {
              $(this).text('▷Yearly');  //期間
               $('#totale-price').html("<%= escape_javascript(render 'price.y') %>");    //合計金額 
-              var price2 = $("#t-price").html();　                                      //ここから。カンマ 
+              var price2 = $("#t-price").html();                                      //ここから。カンマ 
               price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
-              $("#t-price").html(price2);　　　　　　　　　　　　　　　　　　　　　　　　　　　 //ここまで。カンマ
+              $("#t-price").html(price2); //ここまで。カンマ
             } else if ($(this).text() === '▷Yearly'){
                $(this).text('▷Day');
               $('#totale-price').html("<%= escape_javascript(render 'price.d') %>");
-               var price2 = $("#t-price").html();　
+               var price2 = $("#t-price").html();
               price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
               $("#t-price").html(price2);
             } else if ($(this).text() === '▷Day'){
               $(this).text('▷Week');
               $('#totale-price').html("<%= escape_javascript(render 'price.w') %>");
-               var price2 = $("#t-price").html();　
+               var price2 = $("#t-price").html();
               price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
               $("#t-price").html(price2);
             }else{
               $(this).text('▷Monthly');
               $('#totale-price').html("<%= escape_javascript(render 'price.m') %>");
-               var price2 = $("#t-price").html();　
+               var price2 = $("#t-price").html();
               price2 = String(price2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'); 
               $("#t-price").html(price2);
             }
@@ -53,6 +46,24 @@
       });
 
 
-　　</script>
+ $(function(){
+   $(".footer-left-m").hover(function() {
+     $(this).removeClass('footer-left-m');
+     $(this).addClass('footer-left-m-hover');
+    } , 
+    function() {
+     $(this).removeClass('footer-left-m-hover');
+     $(this).addClass('footer-left-m');
+    });
+
+    $('.toTop').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+  });
+
+    </script>
 
 </footer>
